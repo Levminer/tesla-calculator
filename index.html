@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+		<title>Tesla Calculator</title>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="one">
+			<h1>Tesla Calculator</h1>
+			<h3>Gondolkoztál már mennyit kéne dolgoznod hogy legyen egy Teslád?</h3>
+			<h3>Most kiderítheted!</h3>
+		</div>
+
+		<div class="two">
+			<h1>Kereset</h1>
+
+			<input type="data" id="income" placeholder="Kereset" />
+			<input type="data" id="saving" placeholder="Megtakarítás" />
+			<input type="data" id="saved" placeholder="Félretett pénz" />
+		</div>
+
+		<div class="three">
+			<h1>Modell</h1>
+
+			<input type="radio" id="model1" name="model" value="1" /> Model S
+			<input type="radio" id="model2" name="model" value="2" /> Model 3
+			<input type="radio" id="model3" name="model" value="3" /> Model X
+			<input type="radio" id="model4" name="model" value="4" /> Model Y
+		</div>
+
+		<div class="four">
+			<h1>Kivitel</h1>
+
+			<input type="radio" id="options1" name="options" value="1" /> Standard
+			Range Plus (40,000 $)
+			<input type="radio" id="options2" name="options" value="2" /> Long Range
+			(48,000 $)
+			<input type="radio" id="options3" name="options" value="3" /> Performance
+			(56,000 $)
+		</div>
+
+		<div class="five">
+			<h1>Szín</h1>
+
+			<input type="radio" id="color1" name="color" value="1" /> Fehér (0 $)
+			<input type="radio" id="color2" name="color" value="2" /> Fekete (1000 $)
+			<input type="radio" id="color3" name="color" value="3" /> Szürke (1000 $)
+			<input type="radio" id="color4" name="color" value="4" /> Kék (1000 $)
+			<input type="radio" id="color5" name="color" value="5" /> Piros (1500 $)
+		</div>
+
+		<div class="six">
+			<h1>Kerekek</h1>
+
+			<input type="radio" id="tires1" name="tires" value="1" /> 18" Aero (0 $)
+			<input type="radio" id="tires2" name="tires" value="2" /> 19" Sport (1500
+			$) <input type="radio" id="tires3" name="tires" value="3" /> 18" Pirelli
+			Winter (2280 $)
+			<input type="radio" id="tires4" name="tires" value="4" /> 19" Pirelli
+			Winter (3900 $)
+		</div>
+
+		<div class="seven">
+			<h1>Belső tér és Autopilot</h1>
+
+			<input type="radio" id="other1" name="other" value="1" /> Fekete belső (0
+			$) <input type="radio" id="other2" name="other" value="2" /> Fekete és
+			fehér belső (1500 $)
+			<input type="radio" id="other3" name="other" value="3" /> Autopilot (0 $)
+			<input type="radio" id="other4" name="other" value="4" /> FSD (7000 $)
+		</div>
+
+		<br />
+
+		<button type="submit" id="but" onclick="start()">Kész vagyok!</button>
+	</body>
+</html>
