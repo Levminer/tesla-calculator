@@ -28,12 +28,36 @@ body {
 	border-radius: 28px;
 }
 
-#models {
-    margin: 15px;
-    font-size: 200px;
-	border: rgb(130, 255, 105);
-	padding: 1rem;
-	border-radius: 28px;
+#models_options {
+	display: none;
+	
+}
+
+#model3_options {
+	display: none;
+	
+}
+
+#modelx_options {
+	display: none;
+	
+}
+
+#modely_options {
+	display: none;
+	
+}
+
+#color {
+	display: none;
+}
+
+#tires {
+	display: none;
+}
+
+#other {
+	display: none;
 }
 
 #but {
