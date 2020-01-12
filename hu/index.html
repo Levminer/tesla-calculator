@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			href="https://levminer.github.io/teslacalculator/assets/favicon.ico"
+			type="image/x-icon"
+		/>
+		<title>Tesla Calculator</title>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="one">
+			<h1 id="huf_price">Tesla Calculator</h1>
+			<h2 id="month">
+				Gondolkoztál már mennyit kéne dolgoznod hogy legyen egy Teslád?
+			</h2>
+			<h2 id="year">Most kiderítheted! (Figyelem, Depressziót okozhat!)</h2>
+		</div>
+
+		<div class="two">
+			<h1>Kereset</h1>
+			<label id="label1" for="saving">Megtakarítás/hónap (FT)</label>
+			<label id="label2" for="saved">Félretett pénz (FT)</label>
+			<br />
+			<input type="number" id="saving" placeholder="300000" />
+			<input type="number" id="saved" placeholder="1000000" />
+		</div>
+
+		<div class="three">
+			<h2>Modell</h2>
+
+			<input type="radio" id="model2" name="model" value="2" /> Model 3
+			<input type="radio" id="model4" name="model" value="4" /> Model Y
+		</div>
+
+		<div id="model3_options" class="four">
+			<h2>Kivitel</h2>
+
+			<input type="radio" id="model3_options1" name="options" value="1" />
+			Standard Range Plus (40,000 $)
+			<input type="radio" id="model3_options2" name="options" value="2" /> Long
+			Range (48,000 $)
+			<input type="radio" id="model3_options3" name="options" value="3" />
+			Performance (56,000 $)
+		</div>
+
+		<div id="modely_options" class="four">
+			<h2>Kivitel</h2>
+
+			<input type="radio" id="modely_options1" name="options" value="1" /> Long
+			Range (48,000 $)
+			<input type="radio" id="modely_options2" name="options" value="2" /> Long
+			Range Dual Motor (52,000 $)
+			<input type="radio" id="modely_options3" name="options" value="3" />
+			Performance (61,000 $)
+		</div>
+
+		<div id="color" class="five">
+			<h2>Szín</h2>
+
+			<input type="radio" id="color1" name="color" value="1" /> Fehér (0 $)
+			<input type="radio" id="color2" name="color" value="2" /> Fekete (1000 $)
+			<input type="radio" id="color3" name="color" value="3" /> Szürke (1000 $)
+			<input type="radio" id="color4" name="color" value="4" /> Kék (1000 $)
+			<input type="radio" id="color5" name="color" value="5" /> Piros (2000 $)
+		</div>
+
+		<div id="tires" class="six">
+			<h2>Kerekek</h2>
+
+			<input type="radio" id="tires1" name="tires" value="1" /> 18" Aero (0 $)
+			<input type="radio" id="tires2" name="tires" value="2" /> 19" Sport (1500
+			$) <input type="radio" id="tires3" name="tires2" value="3" /> 18" Pirelli
+			Winter (2300 $)
+			<input type="radio" id="tires4" name="tires2" value="4" /> 19" Pirelli
+			Winter (3900 $)
+		</div>
+
+		<div id="other" class="seven">
+			<h2>Belső tér és Autopilot</h2>
+
+			<input type="radio" id="other1" name="other" value="1" /> Fekete belső (0
+			$) <input type="radio" id="other2" name="other" value="2" /> Fekete és
+			fehér belső (1000 $)
+			<input type="radio" id="other3" name="other2" value="3" /> Autopilot (0 $)
+			<input type="radio" id="other4" name="other2" value="4" /> FSD (7000 $)
+		</div>
+
+		<br />
+
+		<button type="submit" id="but" onclick="start()">Tovább</button>
+		<button type="submit" id="but" onclick="reload()">Újra</button>
+
+		<footer>
+			<h2>
+				Készítette:
+				<a href="https://github.com/Levminer">Levminer </a>Forráskód:
+				<a href="https://github.com/Levminer/teslacalculator">GitHub</a>
+			</h2>
+		</footer>
+	</body>
+</html>

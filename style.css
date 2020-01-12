@@ -1,89 +1,39 @@
-body {
+body{
 	padding: 0;
 	text-align: center;
-	color: white;
+	color: black;
 	background-color: black;
 	width: 98%;
 	font-family: Arial, Helvetica, sans-serif;
 	overflow-y: hidden;
-}
-
-footer {
-	color: white;
-	background-color: black;
+	margin: 0;
 	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	text-align: center;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    background-image: url(assets/s3xy.jpg);
+    background-size: cover;
+    background-attachment: fixed;  
 }
 
-#income {
-	margin: 15px;
-	border: rgb(130, 255, 105);
-	padding: 1rem;
-	border-radius: 28px;
-}
-
-#saving {
-	margin: 15px;
-	border: rgb(130, 255, 105);
-	padding: 1rem;
-	border-radius: 28px;
-}
-
-#saved {
-	margin: 15px;
-	border: rgb(130, 255, 105);
-	padding: 1rem;
-	border-radius: 28px;
-}
-
-#models_options {
-	display: none;
-}
-
-#model3_options {
-	display: none;
-}
-
-#modelx_options {
-	display: none;
-}
-
-#modely_options {
-	display: none;
-}
-
-#color {
-	display: none;
-}
-
-#tires {
-	display: none;
-}
-
-#other {
-	display: none;
-}
-
-#but {
-	background-color: #ffffff;
+#button {
+	background-color: black;
 	border-radius: 28px;
 	border: 1px solid #000000;
 	display: inline-block;
 	cursor: pointer;
-	color: #000000;
+	color: white;
 	font-family: Arial;
 	font-size: 17px;
 	padding: 16px 31px;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #000000;
 }
-#but:hover {
-	background-color: black;
-	border: 1px solid white;
-	color: white;
+#button:hover {
+	background-color: white;
+	border: 1px solid black;
+	color: black;
 }
 
 a:link {
