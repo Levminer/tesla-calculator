@@ -2,6 +2,8 @@ let counter_number = 0
 let model_number = 0
 let price_number = 0
 
+const dollar = 300
+
 function start() {
 	switch (counter_number) {
 		case 0:
@@ -28,6 +30,9 @@ function start() {
 			other()
 
 			break
+
+		case 5:
+			money()
 
 		default:
 			break
@@ -150,9 +155,9 @@ function color() {
 		tires.style.display = "block"
 
 		console.log(price_number)
-    }
-    
-    if (color2 == true) {
+	}
+
+	if (color2 == true) {
 		price_number += 1000
 		counter_number++
 
@@ -160,9 +165,9 @@ function color() {
 		tires.style.display = "block"
 
 		console.log(price_number)
-    }
-    
-    if (color3 == true) {
+	}
+
+	if (color3 == true) {
 		price_number += 1000
 		counter_number++
 
@@ -170,9 +175,9 @@ function color() {
 		tires.style.display = "block"
 
 		console.log(price_number)
-    }
-    
-    if (color4 == true) {
+	}
+
+	if (color4 == true) {
 		price_number += 1000
 		counter_number++
 
@@ -180,9 +185,9 @@ function color() {
 		tires.style.display = "block"
 
 		console.log(price_number)
-    }
-    
-    if (color5 == true) {
+	}
+
+	if (color5 == true) {
 		price_number += 2000
 		counter_number++
 
@@ -194,98 +199,119 @@ function color() {
 }
 
 function tires() {
-    
-    let tires1 = document.getElementById("tires1").checked
+	let tires1 = document.getElementById("tires1").checked
 	let tires2 = document.getElementById("tires2").checked
 	let tires3 = document.getElementById("tires3").checked
 	let tires4 = document.getElementById("tires4").checked
 
+	counter_number++
+
 	if (tires1 == true) {
 		price_number += 0
-		counter_number++
 
 		let other = document.getElementById("other")
 		other.style.display = "block"
 
 		console.log(price_number)
-    }
-    
-    if (tires2 == true) {
+	}
+
+	if (tires2 == true) {
 		price_number += 1500
-		counter_number++
 
 		let other = document.getElementById("other")
 		other.style.display = "block"
 
 		console.log(price_number)
-    }
-    
-    if (tires3 == true) {
+	}
+
+	if (tires3 == true) {
 		price_number += 2300
-		counter_number++
 
 		let other = document.getElementById("other")
 		other.style.display = "block"
 
 		console.log(price_number)
-    }
-    
-    if (tires4 == true) {
+	}
+
+	if (tires4 == true) {
 		price_number += 3900
-		counter_number++
 
 		let other = document.getElementById("other")
 		other.style.display = "block"
 
 		console.log(price_number)
-    }
+	}
 }
 
 function other() {
-    
-    let other1 = document.getElementById("other1").checked
+	let other1 = document.getElementById("other1").checked
 	let other2 = document.getElementById("other2").checked
 	let other3 = document.getElementById("other3").checked
 	let other4 = document.getElementById("other4").checked
 
+	counter_number++
+
 	if (other1 == true) {
 		price_number += 0
-		counter_number++
 
 		let other = document.getElementById("other")
 		other.style.display = "block"
 
 		console.log(price_number)
-    }
-    
-    if (other2 == true) {
+	}
+
+	if (other2 == true) {
 		price_number += 1000
-		counter_number++
 
 		let other = document.getElementById("other")
 		other.style.display = "block"
 
 		console.log(price_number)
-    }
-    
-    if (other3 == true) {
+	}
+
+	if (other3 == true) {
 		price_number += 0
-		counter_number++
 
 		let other = document.getElementById("other")
 		other.style.display = "block"
 
 		console.log(price_number)
-    }
-    
-    if (other4 == true) {
+	}
+
+	if (other4 == true) {
 		price_number += 7000
-		counter_number++
 
 		let other = document.getElementById("other")
 		other.style.display = "block"
 
 		console.log(price_number)
-    }
+	}
+	money()
+}
 
+function money() {
+	let money_saving = document.getElementById("saving").value
+	let money_saved = document.getElementById("saved").value
+
+	let huf_price = price_number * dollar
+	let final_price = (+huf_price - +money_saved) / +money_saving
+	let final_price_vat = huf_price * 0.27 + huf_price
+
+	let month = Math.round(final_price + 0)
+	let year = Math.round(final_price / 12)
+
+	let month_vat = Math.round((+final_price_vat - +money_saved) / +money_saving)
+	let year_vat = Math.round(month_vat / 12)
+
+	document.getElementById("huf_price").innerHTML =
+		"Végösszeg: " +
+		huf_price +
+		" FT ---" +
+		" Végösszeg áfával: " +
+		final_price_vat +
+		" FT"
+	document.getElementById("month").innerHTML =
+		month + " Hónapot kell dolgoznod --- " + month_vat + " Hónapot kell dolgoznod áfával"
+	document.getElementById("year").innerHTML = 
+		"Ami " + year + " év kb! --- " + "Ami " + year_vat + " év kb áfával!"
 }

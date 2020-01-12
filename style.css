@@ -1,10 +1,21 @@
 body {
+	padding: 0;
 	text-align: center;
 	color: white;
 	background-color: black;
 	width: 98%;
 	font-family: Arial, Helvetica, sans-serif;
 	overflow-y: hidden;
+}
+
+footer {
+	color: white;
+	background-color: black;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
 }
 
 #income {
@@ -30,22 +41,18 @@ body {
 
 #models_options {
 	display: none;
-	
 }
 
 #model3_options {
 	display: none;
-	
 }
 
 #modelx_options {
 	display: none;
-	
 }
 
 #modely_options {
 	display: none;
-	
 }
 
 #color {
@@ -76,5 +83,15 @@ body {
 #but:hover {
 	background-color: black;
 	border: 1px solid white;
+	color: white;
+}
+
+a:link {
+	text-decoration: none;
+	color: white;
+}
+
+a:visited {
+	text-decoration: none;
 	color: white;
 }
