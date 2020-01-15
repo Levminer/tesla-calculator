@@ -20,12 +20,12 @@ footer {
 
 #label1 {
 	position: relative;
-	right: 50px;
+	right: 45px;
 }
 
 #label2 {
 	position: relative;
-	left: 50px;
+	left: 30px;
 }
 
 #income {
@@ -106,7 +106,7 @@ a:visited {
 	color: white;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 850px) {
 	footer {
 		display: none;
 	}
@@ -119,12 +119,12 @@ a:visited {
 	#label1 {
 		position: relative;
 		bottom: -5px;
-		right: -90px;
+		right: -75px;
 	}
 	
 	#label2 {
 		position: relative;
-		left: -80px;
+		left: -85px;
 		bottom: -90px;
 	}
 }

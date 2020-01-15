@@ -45,3 +45,14 @@ a:visited {
 	text-decoration: none;
 	color: white;
 }
+
+@media only screen and (max-width: 1000px) {
+
+	body{
+
+		background-image: url();
+		background-color: white;
+
+	}
+
+}
