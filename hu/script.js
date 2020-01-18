@@ -1,9 +1,62 @@
+//before start
 let counter_number = 0
 let model_number = 0
 let price_number = 0
 
-const dollar = 300
+let usd = 0
+let eur = 0
+let huf = 0
 
+//? API
+function api() {
+	$.getJSON("https://api.exchangeratesapi.io/latest?base=USD", function(data) {
+		console.log(data)
+
+		usd = data.rates.USD
+
+		eur = data.rates.EUR
+
+		huf = data.rates.HUF
+
+		console.log(usd)
+		console.log(eur)
+		console.log(huf)
+	})
+}
+
+//? currency_checker
+setInterval(currency_checker, 1000)
+
+function currency_checker() {
+	let currency_checker = document.getElementById("currency").value
+
+	if (currency_checker == 1) {
+		document.getElementById("label2").innerHTML = "Megtakarítás/hónap (USD)" 
+		document.getElementById("label3").innerHTML = "Félretett pénz (USD)" 
+
+		document.getElementsByName("saving")[0].placeholder = "1000"
+		document.getElementsByName("saved")[0].placeholder = "5000"
+	} else if (currency_checker == 2) {
+		document.getElementById("label2").innerHTML = "Megtakarítás/hónap (EUR)" 
+		document.getElementById("label3").innerHTML = "Félretett pénz (EUR)" 
+
+		document.getElementsByName("saving")[0].placeholder = "1000"
+		document.getElementsByName("saved")[0].placeholder = "5000"
+	} else if (currency_checker == 3) {
+		document.getElementById("label2").innerHTML = "Megtakarítás/hónap (HUF)"
+		document.getElementById("label3").innerHTML = "Félretett pénz (HUF)"
+
+		document.getElementsByName("saving")[0].placeholder = "300000"
+		document.getElementsByName("saved")[0].placeholder = "1000000"
+	}
+}
+
+//? reload
+function reload() {
+	location.reload()
+}
+
+//start
 function start() {
 	switch (counter_number) {
 		case 0:
@@ -39,11 +92,11 @@ function start() {
 	}
 }
 
-function reload() {
-	location.reload()
-}
-
+//model
 function model() {
+	let model = document.getElementById("model")
+	model.style.display = "block"
+
 	let model2 = document.getElementById("model2").checked
 	let model4 = document.getElementById("model4").checked
 
@@ -66,6 +119,7 @@ function model() {
 	}
 }
 
+//options
 function options() {
 	if (model_number == 2) {
 		let model3_options1 = document.getElementById("model3_options1").checked
@@ -140,6 +194,7 @@ function options() {
 	}
 }
 
+//color
 function color() {
 	let color1 = document.getElementById("color1").checked
 	let color2 = document.getElementById("color2").checked
@@ -198,6 +253,7 @@ function color() {
 	}
 }
 
+//tires
 function tires() {
 	let tires1 = document.getElementById("tires1").checked
 	let tires2 = document.getElementById("tires2").checked
@@ -243,6 +299,7 @@ function tires() {
 	}
 }
 
+//other
 function other() {
 	let other1 = document.getElementById("other1").checked
 	let other2 = document.getElementById("other2").checked
@@ -289,29 +346,48 @@ function other() {
 	money()
 }
 
+//money
 function money() {
-	let money_saving = document.getElementById("saving").value
-	let money_saved = document.getElementById("saved").value
+	let currency_value = document.getElementById("currency").value
+	let saving_value = document.getElementById("saving").value
+	let saved_value = document.getElementById("saved").value
+	let vat_value = document.getElementById("vat").value
 
-	let huf_price = price_number * dollar
-	let final_price = (+huf_price - +money_saved) / +money_saving
-	let final_price_vat = huf_price * 0.27 + huf_price
+	let price_final
+	let price_symbol
 
-	let month = Math.round(final_price + 0)
-	let year = Math.round(final_price / 12)
+	//? price_final
+	if (currency_value == 1) {
+		price_final = Math.round(usd * price_number)
+		price_symbol = " $"
+	} else if (currency_value == 2) {
+		price_final = Math.round(eur * price_number)
+		price_symbol = " €"
+	} else if (currency_value == 3) {
+		price_final = Math.round(huf * price_number)
+		price_symbol = " FT"
+	}
 
-	let month_vat = Math.round((+final_price_vat - +money_saved) / +money_saving)
-	let year_vat = Math.round(month_vat / 12)
+	//? price_final_vat
+	let price_final_vat = Math.round(price_final * vat_value) + price_final
 
-	document.getElementById("huf_price").innerHTML =
-		"Végösszeg: " +
-		huf_price +
-		" FT ---" +
-		" Végösszeg áfával: " +
-		final_price_vat +
-		" FT"
+	//? month_final & year_final
+	let calculator = (+price_final - +saved_value) / +saving_value
+
+	let month_final = Math.round(calculator + 0)
+	let year_final = Math.round(calculator / 12)
+
+	//? month_final_vat & month_final_vat
+	let calculator2 = (+price_final_vat - +saved_value) / +saving_value
+
+	let month_final_vat = Math.round(calculator2 + 0)
+	let year_final_vat = Math.round(calculator2 / 12)
+
+	document.getElementById("price").innerHTML =
+		"Végösszeg: " + price_final + price_symbol + " - " + "Végösszeg áfával: " + price_final_vat + price_symbol
+
 	document.getElementById("month").innerHTML =
-		month + " Hónapot kell dolgoznod --- " + month_vat + " Hónapot kell dolgoznod áfával"
-	document.getElementById("year").innerHTML = 
-		"Ami " + year + " év kb! --- " + "Ami " + year_vat + " év kb áfával!"
+		month_final + " Hónapot kell dolgoznod - " + month_final_vat + " Hónapot kell dolgoznod áfával"
+
+	document.getElementById("year").innerHTML = "Ami " + year_final + " év kb! - " + "Ami " + year_final_vat + " év kb áfával!"
 }

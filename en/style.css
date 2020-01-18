@@ -20,19 +20,30 @@ footer {
 
 #label1 {
 	position: relative;
-	right: 50px;
+	right: 185px;
 }
 
 #label2 {
 	position: relative;
-	left: 60px;
+	right: 55px;
 }
 
-#income {
+#label3 {
+	position: relative;
+	left: 30px;
+}
+
+#label4 {
+	position: relative;
+	left: 170px;
+}
+
+#currency {
 	margin: 15px;
 	border: rgb(130, 255, 105);
 	padding: 1rem;
 	border-radius: 28px;
+	width: 201px;
 }
 
 #saving {
@@ -49,15 +60,19 @@ footer {
 	border-radius: 28px;
 }
 
-#models_options {
+#vat {
+	margin: 15px;
+	border: rgb(130, 255, 105);
+	padding: 1rem;
+	border-radius: 28px;
+	width: 201px;
+}
+
+#model {
 	display: none;
 }
 
 #model3_options {
-	display: none;
-}
-
-#modelx_options {
 	display: none;
 }
 
@@ -106,7 +121,7 @@ a:visited {
 	color: white;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
 	footer {
 		display: none;
 	}
@@ -116,15 +131,31 @@ a:visited {
 		overflow-x: hidden;
 	}
 
-	#label1 {
-		position: relative;
-		bottom: -5px;
-		right: -70px;
+	#currency {
+		display: none;
 	}
-	
+
+	#vat {
+		display: none;
+	}
+
+	#labe1l {
+		display: none;
+	}
+
 	#label2 {
 		position: relative;
-		left: -60px;
+		bottom: -15px;
+		right: -40px;
+	}
+
+	#label3 {
+		position: relative;
+		left: -120px;
 		bottom: -90px;
+	}
+
+	#label4 {
+		display: none;
 	}
 }

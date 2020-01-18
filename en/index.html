@@ -3,22 +3,22 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="shortcut icon"
-			href="https://levminer.github.io/teslacalculator/assets/favicon.ico"
-			type="image/x-icon"
-		/>
 		<title>Tesla Calculator</title>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="script.js"></script>
-		<link rel="stylesheet" href="style.css" />
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=UA-156083178-1"
-		></script>
+		<!-- Link -->
+		<link rel="shortcut icon" href=""https://levminer.github.io/teslacalculator/assets/favicon.ico"" type="image/x-icon">
+		<link rel="stylesheet" href="style.css" />
+		<!-- /Link -->
+
+		<!-- Script -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<!-- /Script -->
+
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156083178-1"></script>
 		<script>
 			window.dataLayer = window.dataLayer || []
 			function gtag() {
@@ -28,26 +28,47 @@
 
 			gtag("config", "UA-156083178-1")
 		</script>
+		<!-- /Google Analytics -->
 	</head>
-	<body>
+
+	<body onload="api()">
 		<div class="one">
-			<h1 id="final_price">Tesla Calculator</h1>
-			<h2 id="month">
-				Have you ever thought about how much you should work to have a Tesla?
-			</h2>
+			<h1 id="price">Tesla Calculator</h1>
+			<h2 id="month">Have you ever thought about how much you should work to have a Tesla?</h2>
 			<h2 id="year">Now you can find out! (Warning, causes depression!)</h2>
 		</div>
 
 		<div class="two">
 			<h1>Earning</h1>
-			<label id="label1" for="saving">Saving/month ($)</label>
-			<label id="label2" for="saved">Saved money ($)</label>
+
+			<label id="label1" for="currency">Currency</label>
+			<label id="label2" for="saving">Saving/month (USD)</label>
+			<label id="label3" for="saved">Saved money (USD)</label>
+			<label id="label4" for="vat">VAT</label>
+
 			<br />
-			<input type="number" id="saving" placeholder="1000" />
-			<input type="number" id="saved" placeholder="5000" />
+
+			<select id="currency">
+				<option value="1" selected="selected">USD</option>
+				<option value="2">EUR</option>
+				<option value="3">HUF</option>
+			</select>
+
+			<input name="saving" type="number" id="saving" placeholder="1000" />
+			<input name="saved" type="number" id="saved" placeholder="5000" />
+
+			<select id="vat">
+				<option value="0.0" selected="selected">(0%)</option>
+				<option value="0.5">5%</option>
+				<option value="0.10">10%</option>
+				<option value="0.15">15%</option>
+				<option value="0.20">20%</option>
+				<option value="0.25">25%</option>
+				<option value="0.27">(27%)</option>
+			</select>
 		</div>
 
-		<div class="three">
+		<div id="model" class="three">
 			<h2>Model</h2>
 
 			<input type="radio" id="model2" name="model" value="2" /> Model 3
@@ -55,23 +76,20 @@
 		</div>
 
 		<div id="model3_options" class="four">
-			<h2>Battery</h2>
+			<h2>Car</h2>
 
 			<input type="radio" id="model3_options1" name="options" value="1" />
 			Standard Range Plus (40,000 $)
-			<input type="radio" id="model3_options2" name="options" value="2" /> Long
-			Range (48,000 $)
+			<input type="radio" id="model3_options2" name="options" value="2" /> Long Range (48,000 $)
 			<input type="radio" id="model3_options3" name="options" value="3" />
 			Performance (56,000 $)
 		</div>
 
 		<div id="modely_options" class="four">
-			<h2>Battery</h2>
+			<h2>Cary</h2>
 
-			<input type="radio" id="modely_options1" name="options" value="1" /> Long
-			Range (48,000 $)
-			<input type="radio" id="modely_options2" name="options" value="2" /> Long
-			Range Dual Motor (52,000 $)
+			<input type="radio" id="modely_options1" name="options" value="1" /> Long Range (48,000 $)
+			<input type="radio" id="modely_options2" name="options" value="2" /> Long Range Dual Motor (52,000 $)
 			<input type="radio" id="modely_options3" name="options" value="3" />
 			Performance (61,000 $)
 		</div>
@@ -90,33 +108,30 @@
 			<h2>Tires</h2>
 
 			<input type="radio" id="tires1" name="tires" value="1" /> 18" Aero (0 $)
-			<input type="radio" id="tires2" name="tires" value="2" /> 19" Sport (1500
-			$) <input type="radio" id="tires3" name="tires2" value="3" /> 18" Pirelli
-			Winter (2300 $)
-			<input type="radio" id="tires4" name="tires2" value="4" /> 19" Pirelli
-			Winter (3900 $)
+			<input type="radio" id="tires2" name="tires" value="2" /> 19" Sport (1500 $)
+			<input type="radio" id="tires3" name="tires2" value="3" /> 18" Pirelli Winter (2300 $)
+			<input type="radio" id="tires4" name="tires2" value="4" /> 19" Pirelli Winter (3900 $)
 		</div>
 
 		<div id="other" class="seven">
 			<h2>Interior and Autopilot</h2>
 
-			<input type="radio" id="other1" name="other" value="1" /> Black interior
-			(0 $) <input type="radio" id="other2" name="other" value="2" /> Black and
-			white interior (1000 $)
+			<input type="radio" id="other1" name="other" value="1" /> Black interior (0 $)
+			<input type="radio" id="other2" name="other" value="2" /> Black and white interior(1000 $)
 			<input type="radio" id="other3" name="other2" value="3" /> Autopilot (0 $)
-			<input type="radio" id="other4" name="other2" value="4" /> Autopilot FSD
-			(7000 $)
+			<input type="radio" id="other4" name="other2" value="4" /> FSD (7000 $)
 		</div>
 
-		<br />
+		<div id="buttons" class="eight">
+			<br />
 
-		<button type="submit" id="but" onclick="start()">Next</button>
-		<button type="submit" id="but" onclick="reload()">Restart</button>
+			<button type="submit" id="but" onclick="start()">Next</button>
+			<button type="submit" id="but" onclick="reload()">Restart</button>
+		</div>
 
 		<footer>
 			<h2>
-				Created by:
-				<a href="https://github.com/Levminer">Levminer </a>Sourcecode:
+				Created by: <a href="https://github.com/Levminer">Levminer</a> - TC V5 - Sourcecode:
 				<a href="https://github.com/Levminer/teslacalculator">GitHub</a>
 			</h2>
 		</footer>
