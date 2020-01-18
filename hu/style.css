@@ -145,14 +145,22 @@ a:visited {
 
 	#label2 {
 		position: relative;
-		bottom: -15px;
-		right: -40px;
+		bottom: -30px;
+		right: 30px;
+		white-space: nowrap;
+		overflow: hidden; 
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	#label3 {
 		position: relative;
-		left: -120px;
-		bottom: -90px;
+		left: 5px;
+		bottom: -85px;
+		white-space: nowrap;
+		overflow: hidden; 
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	#label4 {

@@ -6,6 +6,7 @@ body{
 	width: 98%;
 	font-family: Arial, Helvetica, sans-serif;
 	overflow-y: hidden;
+	overflow-x: hidden;
 	margin: 0;
 	position: absolute;
 	top: 50%;
