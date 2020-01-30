@@ -2,7 +2,8 @@ body {
 	padding: 0;
 	text-align: center;
 	color: white;
-	background-color: black;
+	background: rgb(222,10,10);
+	background: linear-gradient(90deg, rgba(222,10,10,1) 0%, rgba(205,27,27,1) 50%, rgba(162,31,31,1) 100%);
 	width: 98%;
 	font-family: Arial, Helvetica, sans-serif;
 	overflow-y: hidden;
@@ -10,7 +11,9 @@ body {
 
 footer {
 	color: white;
-	background-color: black;
+	background: rgb(222,10,10);
+	background: linear-gradient(90deg, rgba(222,10,10,1) 0%, rgba(205,27,27,1) 50%, rgba(162,31,31,1) 100%);
+	width: 98%;
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -92,21 +95,21 @@ footer {
 	display: none;
 }
 
-#but {
-	background-color: #ffffff;
+#button {
+	background-color: white;
 	border-radius: 28px;
-	border: 1px solid #000000;
+	border: 1px solid white;
 	display: inline-block;
 	cursor: pointer;
-	color: #000000;
+	color: black;
 	font-family: Arial;
 	font-size: 17px;
 	padding: 16px 31px;
 	text-decoration: none;
-	text-shadow: 0px 1px 0px #000000;
+	transition: 0.3s;
 }
-#but:hover {
-	background-color: black;
+#button:hover{
+	background: rgb(222, 10, 10);
 	border: 1px solid white;
 	color: white;
 }

@@ -7,6 +7,11 @@ let usd = 0
 let eur = 0
 let huf = 0
 
+//? onload
+$(document).ready(function() {
+	api()
+})
+
 //? API
 function api() {
 	$.getJSON("https://api.exchangeratesapi.io/latest?base=USD", function(data) {
@@ -18,9 +23,9 @@ function api() {
 
 		huf = data.rates.HUF
 
-		console.log(usd)
-		console.log(eur)
-		console.log(huf)
+		console.log("Dollar " + usd)
+		console.log("Euro " + eur)
+		console.log("Huf " + huf)
 	})
 }
 

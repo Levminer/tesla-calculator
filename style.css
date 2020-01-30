@@ -1,8 +1,8 @@
-body{
+body {
 	padding: 0;
 	text-align: center;
 	color: black;
-	background-color: black;
+	background: white;
 	width: 98%;
 	font-family: Arial, Helvetica, sans-serif;
 	overflow-y: hidden;
@@ -12,16 +12,16 @@ body{
 	top: 50%;
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); 
-    background-image: url(assets/s3xy.jpg);
-    background-size: cover;
-    background-attachment: fixed;  
+	transform: translate(-50%, -50%);
+	background-image: url(assets/s3xy.jpg);
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 #button {
 	background-color: black;
 	border-radius: 28px;
-	border: 1px solid #000000;
+	border: 1px solid black;
 	display: inline-block;
 	cursor: pointer;
 	color: white;
@@ -29,12 +29,12 @@ body{
 	font-size: 17px;
 	padding: 16px 31px;
 	text-decoration: none;
-	text-shadow: 0px 1px 0px #000000;
+	transition: 0.3s;
 }
-#button:hover {
-	background-color: white;
+#button:hover{
+	background: rgb(222, 10, 10);
 	border: 1px solid black;
-	color: black;
+	color: white;
 }
 
 a:link {
@@ -48,12 +48,7 @@ a:visited {
 }
 
 @media only screen and (max-width: 1000px) {
-
-	body{
-
-		background-image: url();
-		background-color: white;
-
+	body {
+		background: rgb(222, 10, 10);
 	}
-
 }

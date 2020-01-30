@@ -7,6 +7,11 @@ let usd = 0
 let eur = 0
 let huf = 0
 
+//? onload
+$(document).ready(function() {
+	api()
+})
+
 //? API
 function api() {
 	$.getJSON("https://api.exchangeratesapi.io/latest?base=USD", function(data) {
@@ -18,9 +23,9 @@ function api() {
 
 		huf = data.rates.HUF
 
-		console.log(usd)
-		console.log(eur)
-		console.log(huf)
+		console.log("Dollar " + usd)
+		console.log("Euro " + eur)
+		console.log("Huf " + huf)
 	})
 }
 
@@ -31,14 +36,14 @@ function currency_checker() {
 	let currency_checker = document.getElementById("currency").value
 
 	if (currency_checker == 1) {
-		document.getElementById("label2").innerHTML = "Megtakarítás/hónap (USD)" 
-		document.getElementById("label3").innerHTML = "Félretett pénz (USD)" 
+		document.getElementById("label2").innerHTML = "Megtakarítás/hónap (USD)"
+		document.getElementById("label3").innerHTML = "Félretett pénz (USD)"
 
 		document.getElementsByName("saving")[0].placeholder = "1000"
 		document.getElementsByName("saved")[0].placeholder = "5000"
 	} else if (currency_checker == 2) {
-		document.getElementById("label2").innerHTML = "Megtakarítás/hónap (EUR)" 
-		document.getElementById("label3").innerHTML = "Félretett pénz (EUR)" 
+		document.getElementById("label2").innerHTML = "Megtakarítás/hónap (EUR)"
+		document.getElementById("label3").innerHTML = "Félretett pénz (EUR)"
 
 		document.getElementsByName("saving")[0].placeholder = "1000"
 		document.getElementsByName("saved")[0].placeholder = "5000"
