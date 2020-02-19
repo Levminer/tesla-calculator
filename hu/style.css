@@ -133,7 +133,11 @@ input:focus::-webkit-input-placeholder {
 	display: none;
 }
 
-#tires {
+#model3_tires {
+	display: none;
+}
+
+#modely_tires {
 	display: none;
 }
 
@@ -218,22 +222,20 @@ a:visited {
 		overflow-x: hidden;
 	}
 
-	#currency {
-		display: none;
-	}
-
-	#vat {
-		display: none;
-	}
-
-	#labe1l {
-		display: none;
+	#label1 {
+		position: relative;
+		bottom: -30px;
+		right: -100px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	#label2 {
 		position: relative;
-		bottom: -30px;
-		right: 30px;
+		bottom: -110px;
+		right: 35px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -242,8 +244,8 @@ a:visited {
 
 	#label3 {
 		position: relative;
-		left: 5px;
-		bottom: -85px;
+		left: 20px;
+		bottom: -170px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -251,6 +253,12 @@ a:visited {
 	}
 
 	#label4 {
-		display: none;
+		position: relative;
+		left: -70px;
+		bottom: -250px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 }

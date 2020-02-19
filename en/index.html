@@ -3,12 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tesla Calculator</title>
+		<title>Tesla Calculator V9</title>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- Link -->
-		<link rel="shortcut icon" href="https://teslacalculator.netlify.com/assets/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="https://teslacalculator.netlify.com/assets/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="style.css" />
 		<!-- /Link -->
 
@@ -71,58 +70,67 @@
 		<div id="model" class="three">
 			<h2>Model</h2>
 
-			<input type="radio" id="model2" name="model" value="2" class="radio"/> Model 3
-			<input type="radio" id="model4" name="model" value="4" class="radio"/> Model Y
+			<input type="radio" id="model2" name="model" value="2" class="radio" /> Model 3
+			<input type="radio" id="model4" name="model" value="4" class="radio" /> Model Y
 		</div>
 
 		<div id="model3_options" class="four">
 			<h2>Car</h2>
 
-			<input type="radio" id="model3_options1" name="options" value="1" class="radio"/>
+			<input type="radio" id="model3_options1" name="options" value="1" class="radio" />
 			Standard Range Plus (40,000 $)
-			<input type="radio" id="model3_options2" name="options" value="2" class="radio"/> 
+			<input type="radio" id="model3_options2" name="options" value="2" class="radio" />
 			Long Range (48,000 $)
-			<input type="radio" id="model3_options3" name="options" value="3" class="radio"/>
+			<input type="radio" id="model3_options3" name="options" value="3" class="radio" />
 			Performance (56,000 $)
 		</div>
 
 		<div id="modely_options" class="four">
 			<h2>Cary</h2>
 
-			<input type="radio" id="modely_options1" name="options" value="1" class="radio"/> 
-			Long Range (48,000 $)
-			<input type="radio" id="modely_options2" name="options" value="2" class="radio"/> 
-			Long Range Dual Motor (52,000 $)
-			<input type="radio" id="modely_options3" name="options" value="3" class="radio"/>
+			<input type="radio" id="modely_options1" name="options" value="2" class="radio" />
+			Long Range (53,000 $)
+			<input type="radio" id="modely_options2" name="options" value="3" class="radio" />
 			Performance (61,000 $)
 		</div>
 
 		<div id="color" class="five">
 			<h2>Color</h2>
 
-			<input type="radio" id="color1" name="color" value="1" class="radio"/> White (0 $)
-			<input type="radio" id="color2" name="color" value="2" class="radio"/> Black (1000 $)
-			<input type="radio" id="color3" name="color" value="3" class="radio"/> Gray (1000 $)
-			<input type="radio" id="color4" name="color" value="4" class="radio"/> Blue (1000 $)
-			<input type="radio" id="color5" name="color" value="5" class="radio"/> Red (2000 $)
+			<input type="radio" id="color1" name="color" value="1" class="radio" /> White (0 $)
+			<input type="radio" id="color2" name="color" value="2" class="radio" /> Black (1000 $)
+			<input type="radio" id="color3" name="color" value="3" class="radio" /> Gray (1000 $)
+			<input type="radio" id="color4" name="color" value="4" class="radio" /> Blue (1000 $)
+			<input type="radio" id="color5" name="color" value="5" class="radio" /> Red (2000 $)
 		</div>
 
-		<div id="tires" class="six">
-			<h2>Tires</h2>
+		<div id="model3_tires" class="six">
+			<h2>Kerekek</h2>
 
-			<input type="radio" id="tires1" name="tires" value="1" class="radio"/> 18" Aero (0 $)
-			<input type="radio" id="tires2" name="tires" value="2" class="radio"/> 19" Sport (1500 $)
-			<input type="radio" id="tires3" name="tires2" value="3" class="radio"/> 18" Pirelli Winter (2300 $)
-			<input type="radio" id="tires4" name="tires2" value="4" class="radio"/> 19" Pirelli Winter (3900 $)
+			<input type="radio" id="tires1" name="model3_tires" value="1" class="radio" /> 18" Aero (0 $)
+			<input type="radio" id="tires2" name="model3_tires" value="2" class="radio" /> 19" Sport (1500 $)
+			<input type="radio" id="tires3" name="model3_tires" value="3" class="radio" /> 20" Performance (0 $) (P)
+			<input type="radio" id="tires4" name="model3_tires2" value="4" class="radio" /> 18" Pirelli Winter (2300 $)
+			<input type="radio" id="tires5" name="model3_tires2" value="5" class="radio" /> 19" Pirelli Winter (3900 $)
+		</div>
+
+		<div id="modely_tires" class="six">
+			<h2>Kerekek</h2>
+
+			<input type="radio" id="tires1" name="modely_tires" value="1" class="radio" /> 19" Gemini (0 $)
+			<input type="radio" id="tires2" name="modely_tires" value="2" class="radio" /> 20" Induction (2000 $)
+			<input type="radio" id="tires3" name="modely_tires" value="3" class="radio" /> 21" Überturbine (0 $) (P)
+			<input type="radio" id="tires4" name="modely_tires2" value="4" class="radio" /> 18" Pirelli Winter (2300 $)
+			<input type="radio" id="tires5" name="modely_tires2" value="5" class="radio" /> 19" Pirelli Winter (3900 $)
 		</div>
 
 		<div id="other" class="seven">
 			<h2>Interior and Autopilot</h2>
 
-			<input type="radio" id="other1" name="other" value="1" class="radio"/> Black interior (0 $)
-			<input type="radio" id="other2" name="other" value="2" class="radio"/> Black and white interior(1000 $)
-			<input type="radio" id="other3" name="other2" value="3" class="radio"/> Autopilot (0 $)
-			<input type="radio" id="other4" name="other2" value="4" class="radio"/> FSD (7000 $)
+			<input type="radio" id="other1" name="other" value="1" class="radio" /> Black interior (0 $)
+			<input type="radio" id="other2" name="other" value="2" class="radio" /> Black and white interior(1000 $)
+			<input type="radio" id="other3" name="other2" value="3" class="radio" /> Autopilot (0 $)
+			<input type="radio" id="other4" name="other2" value="4" class="radio" /> FSD (7000 $)
 		</div>
 
 		<div id="buttons" class="eight">
@@ -134,8 +142,8 @@
 
 		<footer>
 			<h2>
-				Created by: <a href="https://levminer.github.io">Levminer</a> - TC V7 - Sourcecode:
-				<a href="https://github.com/Levminer/teslacalculator">GitHub</a>
+				Created by: <a target="_blank" href="https://levminer.github.io">Levminer</a> - TC V9 - Sourcecode:
+				<a target="_blank" href="https://github.com/Levminer/teslacalculator">GitHub</a>
 			</h2>
 		</footer>
 	</body>
