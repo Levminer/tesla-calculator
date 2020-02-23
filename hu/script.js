@@ -91,9 +91,6 @@ function start() {
 
 		case 5:
 			money()
-
-		default:
-			break
 	}
 }
 
@@ -138,7 +135,7 @@ function options() {
 			let color = document.getElementById("color")
 			color.style.display = "block"
 
-			console.log(price_number)
+			console.log("Options " + price_number)
 		}
 
 		if (model3_options2 == true) {
@@ -148,7 +145,7 @@ function options() {
 			let color = document.getElementById("color")
 			color.style.display = "block"
 
-			console.log(price_number)
+			console.log("Options " + price_number)
 		}
 
 		if (model3_options3 == true) {
@@ -158,7 +155,7 @@ function options() {
 			let color = document.getElementById("color")
 			color.style.display = "block"
 
-			console.log(price_number)
+			console.log("Options " + price_number)
 		}
 	}
 
@@ -173,7 +170,7 @@ function options() {
 			let color = document.getElementById("color")
 			color.style.display = "block"
 
-			console.log(price_number)
+			console.log("Options " + price_number)
 		}
 
 		if (modely_options2 == true) {
@@ -183,7 +180,7 @@ function options() {
 			let color = document.getElementById("color")
 			color.style.display = "block"
 
-			console.log(price_number)
+			console.log("Options " + price_number)
 		}
 	}
 }
@@ -196,169 +193,168 @@ function color() {
 	let color4 = document.getElementById("color4").checked
 	let color5 = document.getElementById("color5").checked
 
-	//? model 3
-	if (model_number == 2) {
-		let model3_tires = document.getElementById("model3_tires")
-		model3_tires.style.display = "block"
-	}
+	if (color1 || color2 || color3 || color4 || color5 == true) {
+		//? model 3
+		if (model_number == 2) {
+			let model3_tires = document.getElementById("model3_tires")
+			model3_tires.style.display = "block"
+		}
 
-	//? model y
-	if (model_number == 4) {
-		let modely_tires = document.getElementById("modely_tires")
-		modely_tires.style.display = "block"
+		//? model y
+		if (model_number == 4) {
+			let modely_tires = document.getElementById("modely_tires")
+			modely_tires.style.display = "block"
+		}
 	}
 
 	if (color1 == true) {
 		price_number += 0
 		counter_number++
-
-		console.log(price_number)
+		console.log("Color " + price_number)
 	}
 
 	if (color2 == true) {
 		price_number += 1000
 		counter_number++
 
-		console.log(price_number)
+		console.log("Color " + price_number)
 	}
 
 	if (color3 == true) {
 		price_number += 1000
 		counter_number++
 
-		console.log(price_number)
+		console.log("Color " + price_number)
 	}
 
 	if (color4 == true) {
 		price_number += 1000
 		counter_number++
 
-		console.log(price_number)
+		console.log("Color " + price_number)
 	}
 
 	if (color5 == true) {
 		price_number += 2000
 		counter_number++
 
-		console.log(price_number)
+		console.log("Color " + price_number)
 	}
 }
 
 //tires
 function tires() {
 	if (model_number == 2) {
-		let model3_tires1 = document.getElementById("tires1").checked
-		let model3_tires2 = document.getElementById("tires2").checked
-		let model3_tires3 = document.getElementById("tires3").checked
-		let model3_tires4 = document.getElementById("tires4").checked
-		let model3_tires5 = document.getElementById("tires5").checked
+		let model3_tires1 = document.getElementById("model3_tires1").checked
+		let model3_tires2 = document.getElementById("model3_tires2").checked
+		let model3_tires3 = document.getElementById("model3_tires3").checked
+		let model3_tires4 = document.getElementById("model3_tires4").checked
+		let model3_tires5 = document.getElementById("model3_tires5").checked
+
+		if (model3_tires1 || model3_tires2 || model3_tires3 || model3_tires4 || model3_tires5 == true) {
+			counter_number++
+		}
 
 		if (model3_tires1 == true) {
 			price_number += 0
-			counter_number++
 
 			let other = document.getElementById("other")
 			other.style.display = "block"
 
-			console.log(price_number)
+			console.log("Tires " + price_number)
 		}
 
 		if (model3_tires2 == true) {
 			price_number += 1500
-			counter_number++
 
 			let other = document.getElementById("other")
 			other.style.display = "block"
 
-			console.log(price_number)
+			console.log("Tires " + price_number)
 		}
 
 		if (model3_tires3 == true) {
 			price_number += 0
-			counter_number++
 
 			let other = document.getElementById("other")
 			other.style.display = "block"
 
-			console.log(price_number)
+			console.log("Tires " + price_number)
 		}
 
 		if (model3_tires4 == true) {
 			price_number += 2300
-			counter_number++
 
 			let other = document.getElementById("other")
 			other.style.display = "block"
 
-			console.log(price_number)
+			console.log("Tires2 " + price_number)
 		}
 
 		if (model3_tires5 == true) {
 			price_number += 3900
-			counter_number++
 
 			let other = document.getElementById("other")
 			other.style.display = "block"
 
-			console.log(price_number)
+			console.log("Tires2 " + price_number)
 		}
 	}
 
 	if (model_number == 4) {
-		let modely_tires1 = document.getElementById("tires1").checked
-		let modely_tires2 = document.getElementById("tires2").checked
-		let modely_tires3 = document.getElementById("tires3").checked
-		let modely_tires4 = document.getElementById("tires4").checked
-		let modely_tires5 = document.getElementById("tires5").checked
+		let modely_tires1 = document.getElementById("modely_tires1").checked
+		let modely_tires2 = document.getElementById("modely_tires2").checked
+		let modely_tires3 = document.getElementById("modely_tires3").checked
+		let modely_tires4 = document.getElementById("modely_tires4").checked
+		let modely_tires5 = document.getElementById("modely_tires5").checked
+
+		if (modely_tires1 || modely_tires2 || modely_tires3 || modely_tires4 || modely_tires5 == true) {
+			counter_number++
+		}
 
 		if (modely_tires1 == true) {
 			price_number += 0
-			counter_number++
 
 			let other = document.getElementById("other")
 			other.style.display = "block"
 
-			console.log(price_number)
+			console.log("Tires " + price_number)
 		}
 
 		if (modely_tires2 == true) {
 			price_number += 2000
-			counter_number++
 
 			let other = document.getElementById("other")
 			other.style.display = "block"
 
-			console.log(price_number)
+			console.log("Tires " + price_number)
 		}
 
 		if (modely_tires3 == true) {
 			price_number += 0
-			counter_number++
 
 			let other = document.getElementById("other")
 			other.style.display = "block"
 
-			console.log(price_number)
+			console.log("Tires " + price_number)
 		}
 
 		if (modely_tires4 == true) {
 			price_number += 2300
-			counter_number++
 
 			let other = document.getElementById("other")
 			other.style.display = "block"
 
-			console.log(price_number)
+			console.log("Tires2 " + price_number)
 		}
 
 		if (modely_tires5 == true) {
 			price_number += 3900
-			counter_number++
 
 			let other = document.getElementById("other")
 			other.style.display = "block"
 
-			console.log(price_number)
+			console.log("Tires2 " + price_number)
 		}
 	}
 }
@@ -370,46 +366,34 @@ function other() {
 	let other3 = document.getElementById("other3").checked
 	let other4 = document.getElementById("other4").checked
 
+	if (other1 || other2 || other3 || other4 == true) {
+		counter_number++
+		money()
+	}
+
 	if (other1 == true) {
 		price_number += 0
-		counter_number++
 
-		let other = document.getElementById("other")
-		other.style.display = "block"
-
-		console.log(price_number)
+		console.log("Other " + price_number)
 	}
 
 	if (other2 == true) {
 		price_number += 1000
-		counter_number++
 
-		let other = document.getElementById("other")
-		other.style.display = "block"
-
-		console.log(price_number)
+		console.log("Other " + price_number)
 	}
 
 	if (other3 == true) {
 		price_number += 0
-		counter_number++
 
-		let other = document.getElementById("other")
-		other.style.display = "block"
-
-		console.log(price_number)
+		console.log("Other2 " + price_number)
 	}
 
 	if (other4 == true) {
 		price_number += 7000
-		counter_number++
 
-		let other = document.getElementById("other")
-		other.style.display = "block"
-
-		console.log(price_number)
+		console.log("Other2 " + price_number)
 	}
-	money()
 }
 
 //money
