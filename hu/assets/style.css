@@ -8,7 +8,6 @@ body {
 	width: 98%;
 	font-family: Arial, Helvetica, sans-serif;
 	overflow-y: hidden;
-	overflow-y: hidden;
 	overflow: hidden;
 }
 
@@ -22,6 +21,23 @@ footer {
 	bottom: -10px;
 	left: 0;
 	text-align: center;
+}
+
+/* undurline */
+
+.text_a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.text_b {
+	text-decoration: none;
+	color: #c7f464;
+}
+
+.text_c {
+	text-decoration: none;
+	color: #f1bb1b;
 }
 
 /* inputs */
@@ -117,31 +133,24 @@ input:focus::-webkit-input-placeholder {
 }
 
 /* options */
-#model {
+
+.three {
 	display: none;
 }
 
-#model3_options {
+.four {
 	display: none;
 }
 
-#modely_options {
+.five {
 	display: none;
 }
 
-#color {
+.six {
 	display: none;
 }
 
-#model3_tires {
-	display: none;
-}
-
-#modely_tires {
-	display: none;
-}
-
-#other {
+.seven {
 	display: none;
 }
 

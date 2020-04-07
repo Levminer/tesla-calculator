@@ -17,9 +17,3 @@
 - Code: Visual Studio Code
 - GitHub: GitHub Desktop
 - Images: paint.net
-
-# Code:
-
-- 150 lines of HTML
-- 265 lines of CSS
-- 444 lines of JS
