@@ -3,7 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Tesla Calculator 1.0.0</title>
+		<title>Tesla Calculator 1.1.0</title>
 		<meta charset="UTF-8" />
 		<!-- Link -->
 		<link rel="shortcut icon" href="https://teslacalculator.levminer.me/assets/favicon.ico" type="image/x-icon" />
@@ -15,6 +15,7 @@
 		<script src="assets/model3.js" defer></script>
 		<script src="assets/modelx.js" defer></script>
 		<script src="assets/modely.js" defer></script>
+		<script src="assets/model_other.js" defer></script>
 		<!-- Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156083178-1"></script>
 		<script>
@@ -66,12 +67,36 @@
 		</div>
 
 		<div id="model" class="three">
-			<h2>Modell</h2>
+			<h2>
+				<input
+					type="submit"
+					value="Model"
+					id="submit"
+					onclick="model_switcher()"
+					title="Kattints a többi model megjelenítéséhez!"
+				/>
+			</h2>
 
 			<input type="radio" id="model1" name="model" value="1" class="radio" /> Model S
 			<input type="radio" id="model2" name="model" value="2" class="radio" /> Model 3
 			<input type="radio" id="model3" name="model" value="3" class="radio" /> Model X
 			<input type="radio" id="model4" name="model" value="4" class="radio" /> Model Y
+		</div>
+
+		<div id="model_other" class="three">
+			<h2>
+				<input
+					type="submit"
+					value="Model"
+					id="submit"
+					onclick="model_switcher()"
+					title="Kattints a többi model megjelenítéséhez!"
+				/>
+			</h2>
+
+			<input type="radio" id="model5" name="model" value="5" class="radio" /> Cybertuck
+			<input type="radio" id="model6" name="model" value="6" class="radio" /> Semi
+			<input type="radio" id="model7" name="model" value="7" class="radio" /> Roadster
 		</div>
 
 		<div id="models_options" class="four">
@@ -118,6 +143,37 @@
 				<input type="checkbox" id="modely_options3" name="options2" value="3" class="radio" />
 				Performance Upgrade (0 $)
 			</u>
+		</div>
+
+		<div id="cybertruck_options" class="four">
+			<h2>Kivitel (Cybertuck)</h2>
+
+			<input type="radio" id="cybertruck_options1" name="options" value="1" class="radio" />
+			Cybertuck Singel Motor (40,000 $)
+			<input type="radio" id="cybertruck_options2" name="options" value="2" class="radio" />
+			Cybertuck Dual Motor (50,000 $)
+			<input type="radio" id="cybertruck_options3" name="options" value="3" class="radio" />
+			Cybertuck Tri Motor (70,000 $)
+		</div>
+
+		<div id="semi_options" class="four">
+			<h2>Kivitel (Semi)</h2>
+
+			<input type="radio" id="semi_options1" name="options" value="1" class="radio" />
+			Semi 500km ($150,000)
+			<input type="radio" id="semi_options2" name="options" value="2" class="radio" />
+			Semi 800km ($180,000)
+			<input type="radio" id="semi_options3" name="options" value="3" class="radio" />
+			Semi Founders Series ($200,000)
+		</div>
+
+		<div id="roadster_options" class="four">
+			<h2>Kivitel (Roadster)</h2>
+
+			<input type="radio" id="roadster_options1" name="options" value="1" class="radio" />
+			Roadster ($200,000)
+			<input type="radio" id="roadster_options2" name="options" value="2" class="radio" />
+			Roadster Founders Series ($250,000)
 		</div>
 
 		<div id="models_color" class="five">
@@ -267,7 +323,7 @@
 
 		<footer>
 			<h2>
-				Készítette: <a target="_blank" href="https://www.levminer.me">Levminer</a> - TC 1.0.0 - Forráskód:
+				Készítette: <a target="_blank" href="https://www.levminer.me">Levminer</a> - TC 1.1.0 - Forráskód:
 				<a target="_blank" href="https://github.com/Levminer/teslacalculator">GitHub</a>
 			</h2>
 		</footer>

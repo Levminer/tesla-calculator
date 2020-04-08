@@ -18,12 +18,12 @@ footer {
 	width: 100%;
 	position: absolute;
 	right: 0;
-	bottom: -10px;
+	bottom: -15px;
 	left: 0;
 	text-align: center;
 }
 
-/* undurline */
+/* underline */
 
 .text_a {
 	text-decoration: none;
@@ -133,7 +133,6 @@ input:focus::-webkit-input-placeholder {
 }
 
 /* options */
-
 .three {
 	display: none;
 }
@@ -172,6 +171,18 @@ input:focus::-webkit-input-placeholder {
 	background: rgb(222, 10, 10);
 	border: 1px solid white;
 	color: white;
+}
+
+input#submit {
+	background: none;
+	border: none;
+	font-size: 1em;
+	color: white;
+	cursor: pointer;
+}
+
+input#submit:hover {
+	text-decoration: underline;
 }
 
 /* links */
