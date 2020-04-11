@@ -88,6 +88,8 @@ function model_other_money() {
 	let price_final
 	let price_symbol
 
+	counter_number = 5
+
 	//? price_final
 	if (currency_value == 1) {
 		price_final = Math.round(usd * price_number)

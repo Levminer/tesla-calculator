@@ -57,15 +57,17 @@ function currency_checker() {
 
 //? model_switcher
 function model_switcher() {
-	let model = document.getElementById("model")
-	let model_other = document.getElementById("model_other")
+	if (counter_number == 0) {
+		let model = document.getElementById("model")
+		let model_other = document.getElementById("model_other")
 
-	if (model.style.display === "block") {
-		model.style.display = "none"
-		model_other.style.display = "block"
-	} else {
-		model.style.display = "block"
-		model_other.style.display = "none"
+		if (model.style.display === "block") {
+			model.style.display = "none"
+			model_other.style.display = "block"
+		} else {
+			model.style.display = "block"
+			model_other.style.display = "none"
+		}
 	}
 }
 

@@ -182,6 +182,7 @@ function modely_money() {
 	let vat_value = document.getElementById("vat").value
 	let price_final
 	let price_symbol
+	counter_number = 5
 
 	//? price_final
 	if (currency_value == 1) {
