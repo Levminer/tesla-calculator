@@ -87,7 +87,6 @@ function model_other_money() {
 	let vat_value = document.getElementById("vat").value
 	let price_final
 	let price_symbol
-
 	counter_number = 5
 
 	//? price_final
@@ -118,10 +117,11 @@ function model_other_money() {
 	let year_final_vat = Math.round(calculator2 / 12)
 
 	document.getElementById("price").innerHTML =
-		"Végösszeg: " + price_final + price_symbol + " - " + "Végösszeg áfával: " + price_final_vat + price_symbol
+		"Final price: " + price_final + price_symbol + " - " + "Final price with VAT: " + price_final_vat + price_symbol
 
 	document.getElementById("month").innerHTML =
-		month_final + " Hónapot kell dolgoznod - " + month_final_vat + " Hónapot kell dolgoznod áfával"
+		"You have to work " + month_final + " months! - " + "You have to work " + month_final_vat + " months with VAT!"
 
-	document.getElementById("year").innerHTML = "Ami " + year_final + " év kb! - " + "Ami " + year_final_vat + " év kb áfával!"
+	document.getElementById("year").innerHTML =
+		"That's about " + year_final + " years! - " + "That's about " + year_final_vat + " years with VAT!"
 }
