@@ -3,7 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Tesla Calculator 1.2.0</title>
+		<title>Tesla Calculator 2.0.0</title>
 		<meta charset="UTF-8" />
 		<!-- Link -->
 		<link rel="shortcut icon" href="https://teslacalculator.levminer.me/assets/favicon.ico" type="image/x-icon" />
@@ -16,9 +16,17 @@
 		<script src="assets/modelx.js" defer></script>
 		<script src="assets/modely.js" defer></script>
 		<script src="assets/model_other.js" defer></script>
-		<!-- Simple Analytics -->
-		<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
-		<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt="" /></noscript>
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165249305-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				dataLayer.push(arguments)
+			}
+			gtag("js", new Date())
+
+			gtag("config", "UA-165249305-1")
+		</script>
 	</head>
 
 	<body>
@@ -315,7 +323,7 @@
 
 		<footer>
 			<h2>
-				Készítette: <a target="_blank" href="https://www.levminer.me">Levminer</a> - TC 1.2.0 - Forráskód:
+				Készítette: <a target="_blank" href="https://www.levminer.me">Levminer</a> - TC 2.0.0 - Forráskód:
 				<a target="_blank" href="https://github.com/Levminer/teslacalculator">GitHub</a>
 			</h2>
 		</footer>
