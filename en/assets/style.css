@@ -5,11 +5,10 @@ body {
 	color: white;
 	background: rgb(222, 10, 10);
 	background: linear-gradient(90deg, rgba(222, 10, 10, 1) 0%, rgba(205, 27, 27, 1) 50%, rgba(162, 31, 31, 1) 100%);
+	width: 98%;
 	font-family: Arial, Helvetica, sans-serif;
 	overflow-y: hidden;
-	overflow-y: hidden;
 	overflow: hidden;
-	width: 98%;
 }
 
 footer {
@@ -19,9 +18,26 @@ footer {
 	width: 100%;
 	position: absolute;
 	right: 0;
-	bottom: -10px;
+	bottom: -15px;
 	left: 0;
 	text-align: center;
+}
+
+/* underline */
+
+.text_a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.text_b {
+	text-decoration: none;
+	color: #c7f464;
+}
+
+.text_c {
+	text-decoration: none;
+	color: #f1bb1b;
 }
 
 /* inputs */
@@ -98,12 +114,12 @@ input:focus::-webkit-input-placeholder {
 /* labels */
 #label1 {
 	position: relative;
-	right: 185px;
+	right: 190px;
 }
 
 #label2 {
 	position: relative;
-	right: 55px;
+	right: 60px;
 }
 
 #label3 {
@@ -113,35 +129,27 @@ input:focus::-webkit-input-placeholder {
 
 #label4 {
 	position: relative;
-	left: 170px;
+	left: 175px;
 }
 
 /* options */
-#model {
+.three {
 	display: none;
 }
 
-#model3_options {
+.four {
 	display: none;
 }
 
-#modely_options {
+.five {
 	display: none;
 }
 
-#color {
+.six {
 	display: none;
 }
 
-#model3_tires {
-	display: none;
-}
-
-#modely_tires {
-	display: none;
-}
-
-#other {
+.seven {
 	display: none;
 }
 
@@ -163,6 +171,18 @@ input:focus::-webkit-input-placeholder {
 	background: rgb(222, 10, 10);
 	border: 1px solid white;
 	color: white;
+}
+
+input#submit {
+	background: none;
+	border: none;
+	font-size: 1em;
+	color: white;
+	cursor: pointer;
+}
+
+input#submit:hover {
+	text-decoration: underline;
 }
 
 /* links */
@@ -220,15 +240,12 @@ a:visited {
 	body {
 		overflow-y: scroll;
 		overflow-x: hidden;
-		height: 755.655px;
-		width: 350px;
-		background: rgb(222, 10, 10);
 	}
 
 	#label1 {
 		position: relative;
-		bottom: -25px;
-		right: -80px;
+		bottom: -30px;
+		right: -100px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -238,7 +255,7 @@ a:visited {
 	#label2 {
 		position: relative;
 		bottom: -110px;
-		right: 30px;
+		right: 35px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -257,7 +274,7 @@ a:visited {
 
 	#label4 {
 		position: relative;
-		left: -75px;
+		left: -70px;
 		bottom: -250px;
 		white-space: nowrap;
 		overflow: hidden;
