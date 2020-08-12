@@ -6,32 +6,29 @@ let usd = 1
 let eur = 0.93
 let huf = 312
 
-//? onload
-$(document).ready(function () {
-	api()
-})
-
 //? API
-function api() {
-	$.getJSON("https://api.exchangeratesapi.io/latest?base=USD", function (data) {
-		console.log(data)
+let api = () => {
+	fetch("https://api.exchangeratesapi.io/latest?base=USD")
+		.then((res) => res.json())
+		.then((data) => {
+			try {
+				console.log(data)
 
-		usd = data.rates.USD
+				usd = data.rates.USD
+				eur = data.rates.EUR
+				huf = data.rates.HUF
 
-		eur = data.rates.EUR
-
-		huf = data.rates.HUF
-
-		console.log("Dollar (API): " + usd)
-		console.log("Euro (API): " + eur)
-		console.log("Huf (API): " + huf)
-	})
+				console.log(`Dollar (API): ${usd}`)
+				console.log(`Euro (API):  ${eur}`)
+				console.log(`Huf (API): ${huf}`)
+			} catch (error) {
+				return
+			}
+		})
 }
 
 //? currency_checker
-setInterval(currency_checker, 1000)
-
-function currency_checker() {
+let currency_checker = () => {
 	let currency_checker = document.getElementById("currency").value
 
 	if (currency_checker == 1) {
@@ -55,8 +52,11 @@ function currency_checker() {
 	}
 }
 
+// start currency_checker
+setInterval(currency_checker, 1000)
+
 //? model_switcher
-function model_switcher() {
+let model_switcher = () => {
 	if (counter_number == 0) {
 		let model = document.getElementById("model")
 		let model_other = document.getElementById("model_other")
@@ -72,15 +72,15 @@ function model_switcher() {
 }
 
 //? reload
-function reload() {
+let reload = () => {
 	location.reload()
 }
 
-//start
-function start() {
+//? start
+let start = () => {
 	switch (counter_number) {
 		case 0:
-			// ? model
+			// model
 			let model_start = document.getElementById("model")
 			model_start.style.display = "block"
 
@@ -163,7 +163,7 @@ function start() {
 			break
 
 		case 1:
-			//? options
+			//options
 			if (model_number == 1) {
 				models_options()
 			}
@@ -194,7 +194,7 @@ function start() {
 			break
 
 		case 2:
-			//? color
+			//color
 			if (model_number == 1) {
 				models_color()
 			}
@@ -213,7 +213,7 @@ function start() {
 			break
 
 		case 3:
-			//? tires
+			//tires
 			if (model_number == 1) {
 				models_tires()
 			}
@@ -232,7 +232,7 @@ function start() {
 			break
 
 		case 4:
-			//? other
+			//other
 			if (model_number == 1) {
 				models_other()
 			}

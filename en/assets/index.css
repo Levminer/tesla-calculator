@@ -83,28 +83,28 @@ input:focus::-webkit-input-placeholder {
 	transition: 0.3s;
 }
 
-#saving:focus {
+#saving:hover {
 	background: rgb(222, 10, 10);
 	border: 1px solid white;
 	border-radius: 28px;
 	color: white;
 }
 
-#saved:focus {
+#saved:hover {
 	background: rgb(222, 10, 10);
 	border: 1px solid white;
 	border-radius: 28px;
 	color: white;
 }
 
-#currency:focus {
+#currency:hover {
 	background: rgb(222, 10, 10);
 	border: 1px solid white;
 	border-radius: 28px;
 	color: white;
 }
 
-#vat:focus {
+#vat:hover {
 	background: rgb(222, 10, 10);
 	border: 1px solid white;
 	border-radius: 28px;
@@ -114,7 +114,7 @@ input:focus::-webkit-input-placeholder {
 /* labels */
 #label1 {
 	position: relative;
-	right: 160px;
+	right: 190px;
 }
 
 #label2 {
@@ -124,12 +124,12 @@ input:focus::-webkit-input-placeholder {
 
 #label3 {
 	position: relative;
-	left: 5px;
+	left: 30px;
 }
 
 #label4 {
 	position: relative;
-	left: 145px;
+	left: 175px;
 }
 
 /* options */
@@ -229,6 +229,24 @@ a:visited {
 }
 .radio:checked {
 	background-color: white;
+}
+
+select {
+	cursor: pointer;
+	outline: none;
+	-webkit-appearance: none;
+	text-indent: 1px;
+	text-overflow: "";
+}
+
+input {
+	outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 /* mobile view */

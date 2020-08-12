@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Tesla Calculator 2.1.0</title>
+		<meta name="description" content="Tesla Calculator Hungarian" />
+		<title>Tesla Calculator</title>
 		<meta charset="UTF-8" />
-		<!-- Link -->
-		<link rel="shortcut icon" href="https://teslacalculator.levminer.me/assets/favicon.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="assets/style.css" />
-		<!-- Script -->
-		<script src="https://cdn.levminer.me/javascripts/jquery.js" defer></script>
-		<script src="assets/script.js" defer></script>
-		<script src="assets/models.js" defer></script>
-		<script src="assets/model3.js" defer></script>
-		<script src="assets/modelx.js" defer></script>
-		<script src="assets/modely.js" defer></script>
-		<script src="assets/model_other.js" defer></script>
-		<!-- Google Analytics -->
+		<!-- css -->
+		<link rel="stylesheet" href="./assets/index.css" />
+		<!-- js -->
+		<script defer src="./assets/index.js"></script>
+		<script defer src="./assets/models.js"></script>
+		<script defer src="./assets/model3.js"></script>
+		<script defer src="./assets/modelx.js"></script>
+		<script defer src="./assets/modely.js"></script>
+		<script defer src="./assets/model_other.js"></script>
+		<!-- analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165249305-1"></script>
 		<script>
 			window.dataLayer = window.dataLayer || []
@@ -29,7 +29,7 @@
 		</script>
 	</head>
 
-	<body>
+	<body onload="api()">
 		<div class="one">
 			<h1 id="price">Tesla Calculator</h1>
 			<h2 id="month">Gondolkoztál már mennyit kéne dolgoznod hogy legyen egy Teslád?</h2>
@@ -323,8 +323,8 @@
 
 		<footer>
 			<h2>
-				Készítette: <a target="_blank" href="https://www.levminer.me">Levminer</a> - TC 2.1.0 - Forráskód:
-				<a target="_blank" href="https://github.com/Levminer/teslacalculator">GitHub</a>
+				Készítette: <a target="_blank" href="https://www.levminer.com">Levminer</a> - TC 2.2.0 - Forráskód:
+				<a target="_blank" href="https://github.com/Levminer/tesla-calculator">GitHub</a>
 			</h2>
 		</footer>
 	</body>
