@@ -1,16 +1,16 @@
-//model
-function modely_options() {
+//? model
+let modely_options = () => {
 	let modely_options1 = document.getElementById("modely_options1").checked
 	let modely_options2 = document.getElementById("modely_options2").checked
 	let modely_options3 = document.getElementById("modely_options3").checked
 
 	if (modely_options1 || modely_options2 || modely_options3 == true) {
-		//! next
+		// next
 		counter_number = 2
 		let modely_color = document.getElementById("modely_color")
 		modely_color.style.display = "block"
 
-		//! options
+		// options
 		if (modely_options1 == true) {
 			price_number += 53000
 
@@ -25,8 +25,8 @@ function modely_options() {
 	}
 }
 
-//color
-function modely_color() {
+//? color
+let modely_color = () => {
 	let modely_color1 = document.getElementById("modely_color1").checked
 	let modely_color2 = document.getElementById("modely_color2").checked
 	let modely_color3 = document.getElementById("modely_color3").checked
@@ -34,12 +34,12 @@ function modely_color() {
 	let modely_color5 = document.getElementById("modely_color5").checked
 
 	if (modely_color1 || modely_color2 || modely_color3 || modely_color4 || modely_color5 == true) {
-		//! next
+		// next
 		counter_number = 3
 		let modely_tires = document.getElementById("modely_tires")
 		modely_tires.style.display = "block"
 
-		//! options
+		// options
 		if (modely_color1 == true) {
 			price_number += 0
 
@@ -72,8 +72,8 @@ function modely_color() {
 	}
 }
 
-//tires
-function modely_tires() {
+//? tires
+let modely_tires = () => {
 	let modely_tires1 = document.getElementById("modely_tires1").checked
 	let modely_tires2 = document.getElementById("modely_tires2").checked
 	let modely_tires3 = document.getElementById("modely_tires3").checked
@@ -81,12 +81,12 @@ function modely_tires() {
 	let modely_tires5 = document.getElementById("modely_tires4").checked
 
 	if ((modely_tires1 || modely_tires2 || modely_tires3) == true) {
-		//! next
+		// next
 		counter_number = 4
 		let modely_other = document.getElementById("modely_other")
 		modely_other.style.display = "block"
 
-		//! options
+		// options
 		if (modely_tires1 == true) {
 			price_number += 0
 
@@ -119,8 +119,8 @@ function modely_tires() {
 	}
 }
 
-//other
-function modely_other() {
+//? other
+let modely_other = () => {
 	let modely_other1 = document.getElementById("modely_other1").checked
 	let modely_other2 = document.getElementById("modely_other2").checked
 	let modely_other3 = document.getElementById("modely_other3").checked
@@ -129,7 +129,7 @@ function modely_other() {
 	let modely_other6 = document.getElementById("modely_other6").checked
 
 	if ((modely_other1 || modely_other2) && (modely_other3 || modely_other4) && (modely_other5 || modely_other6) == true) {
-		//! options
+		// options
 		if (modely_other1 == true) {
 			price_number += 0
 
@@ -174,17 +174,18 @@ function modely_other() {
 	}
 }
 
-//money
-function modely_money() {
+//? money
+let modely_money = () => {
 	let currency_value = document.getElementById("currency").value
 	let saving_value = document.getElementById("saving").value
 	let saved_value = document.getElementById("saved").value
 	let vat_value = document.getElementById("vat").value
 	let price_final
 	let price_symbol
+
 	counter_number = 5
 
-	//? price_final
+	// price_final
 	if (currency_value == 1) {
 		price_final = Math.round(usd * price_number)
 		price_symbol = " $"
@@ -196,26 +197,28 @@ function modely_money() {
 		price_symbol = " FT"
 	}
 
-	//? price_final_vat
+	// price_final_vat
 	let price_final_vat = Math.round(price_final * vat_value) + price_final
 
-	//? month_final & year_final
+	// month_final & year_final
 	let calculator = (+price_final - +saved_value) / +saving_value
 
 	let month_final = Math.round(calculator + 0)
 	let year_final = Math.round(calculator / 12)
 
-	//? month_final_vat & month_final_vat
+	// month_final_vat & month_final_vat
 	let calculator2 = (+price_final_vat - +saved_value) / +saving_value
 
 	let month_final_vat = Math.round(calculator2 + 0)
 	let year_final_vat = Math.round(calculator2 / 12)
 
-	document.getElementById("price").innerHTML =
-		"Végösszeg: " + price_final + price_symbol + " - " + "Végösszeg áfával: " + price_final_vat + price_symbol
+	document.getElementById(
+		"price"
+	).innerText = `Végösszeg: ${price_final}${price_symbol} - Végösszeg áfával: ${price_final_vat}${price_symbol}`
 
-	document.getElementById("month").innerHTML =
-		month_final + " Hónapot kell dolgoznod - " + month_final_vat + " Hónapot kell dolgoznod áfával"
+	document.getElementById(
+		"month"
+	).innerText = `${month_final} Hónapot kell dolgoznod - ${month_final_vat} Hónapot kell dolgoznod áfával`
 
-	document.getElementById("year").innerHTML = "Ami " + year_final + " év kb! - " + "Ami " + year_final_vat + " év kb áfával!"
+	document.getElementById("year").innerText = `Ami ${year_final} év kb! - Ami ${year_final_vat} év kb áfával!`
 }

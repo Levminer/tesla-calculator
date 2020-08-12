@@ -1,15 +1,15 @@
-//model
-function models_options() {
+//? model
+let models_options = () => {
 	let models_options1 = document.getElementById("models_options1").checked
 	let models_options2 = document.getElementById("models_options2").checked
 
 	if (models_options1 || models_options2 == true) {
-		//! next
+		// next
 		counter_number = 2
 		let models_color = document.getElementById("models_color")
 		models_color.style.display = "block"
 
-		//! options
+		// options
 		if (models_options1 == true) {
 			price_number += 80000
 
@@ -24,8 +24,8 @@ function models_options() {
 	}
 }
 
-//color
-function models_color() {
+//? color
+let models_color = () => {
 	let models_color1 = document.getElementById("models_color1").checked
 	let models_color2 = document.getElementById("models_color2").checked
 	let models_color3 = document.getElementById("models_color3").checked
@@ -33,12 +33,12 @@ function models_color() {
 	let models_color5 = document.getElementById("models_color5").checked
 
 	if (models_color1 || models_color2 || models_color3 || models_color4 || models_color5 == true) {
-		//! next
+		// next
 		counter_number = 3
 		let models_tires = document.getElementById("models_tires")
 		models_tires.style.display = "block"
 
-		//! options
+		// options
 		if (models_color1 == true) {
 			price_number += 0
 
@@ -71,19 +71,19 @@ function models_color() {
 	}
 }
 
-//tires
-function models_tires() {
+//? tires
+let models_tires = () => {
 	let models_tires1 = document.getElementById("models_tires1").checked
 	let models_tires2 = document.getElementById("models_tires2").checked
 	let models_tires3 = document.getElementById("models_tires3").checked
 
 	if (models_tires1 || models_tires2 || models_tires3 == true) {
-		//! next
+		// next
 		counter_number = 4
 		let models_other = document.getElementById("models_other")
 		models_other.style.display = "block"
 
-		//! options
+		// options
 		if (models_tires1 == true) {
 			price_number += 0
 
@@ -104,8 +104,8 @@ function models_tires() {
 	}
 }
 
-//other
-function models_other() {
+//? other
+let models_other = () => {
 	let models_other1 = document.getElementById("models_other1").checked
 	let models_other2 = document.getElementById("models_other2").checked
 	let models_other3 = document.getElementById("models_other3").checked
@@ -113,7 +113,7 @@ function models_other() {
 	let models_other5 = document.getElementById("models_other5").checked
 
 	if ((models_other1 || models_other2 || models_other3) && (models_other4 || models_other5) == true) {
-		//! options
+		// options
 		if (models_other1 == true) {
 			price_number += 0
 
@@ -151,17 +151,18 @@ function models_other() {
 	}
 }
 
-//money
-function models_money() {
+//?money
+let models_money = () => {
 	let currency_value = document.getElementById("currency").value
 	let saving_value = document.getElementById("saving").value
 	let saved_value = document.getElementById("saved").value
 	let vat_value = document.getElementById("vat").value
 	let price_final
 	let price_symbol
+
 	counter_number = 5
 
-	//? price_final
+	// price_final
 	if (currency_value == 1) {
 		price_final = Math.round(usd * price_number)
 		price_symbol = " $"
@@ -173,27 +174,28 @@ function models_money() {
 		price_symbol = " FT"
 	}
 
-	//? price_final_vat
+	// price_final_vat
 	let price_final_vat = Math.round(price_final * vat_value) + price_final
 
-	//? month_final & year_final
+	// month_final & year_final
 	let calculator = (+price_final - +saved_value) / +saving_value
 
 	let month_final = Math.round(calculator + 0)
 	let year_final = Math.round(calculator / 12)
 
-	//? month_final_vat & month_final_vat
+	// month_final_vat & month_final_vat
 	let calculator2 = (+price_final_vat - +saved_value) / +saving_value
 
 	let month_final_vat = Math.round(calculator2 + 0)
 	let year_final_vat = Math.round(calculator2 / 12)
 
-	document.getElementById("price").innerHTML =
-		"Final price: " + price_final + price_symbol + " - " + "Final price with VAT: " + price_final_vat + price_symbol
+	document.getElementById(
+		"price"
+	).innerText = `Price: ${price_final}${price_symbol} - Price with VAT: ${price_final_vat}${price_symbol}`
 
-	document.getElementById("month").innerHTML =
-		"You have to work " + month_final + " months! - " + "You have to work " + month_final_vat + " months with VAT!"
+	document.getElementById(
+		"month"
+	).innerText = `${month_final} months you have to work - ${month_final_vat} months you have to work with vat`
 
-	document.getElementById("year").innerHTML =
-		"That's about " + year_final + " years! - " + "That's about " + year_final_vat + " years with VAT!"
+	document.getElementById("year").innerText = `That's ${year_final} years! - That's ${year_final_vat} years with vat!`
 }
