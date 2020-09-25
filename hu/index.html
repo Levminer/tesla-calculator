@@ -10,6 +10,7 @@
 		<!-- css -->
 		<link rel="stylesheet" href="./assets/index.css" />
 		<!-- js -->
+		<script defer src="https://cdn.levminer.com/js/teslacalculator/price.js"></script>
 		<script defer src="./assets/index.js"></script>
 		<script defer src="./assets/models.js"></script>
 		<script defer src="./assets/model3.js"></script>
@@ -68,13 +69,7 @@
 
 		<div id="model" class="three">
 			<h2>
-				<input
-					type="submit"
-					value="Model"
-					id="submit"
-					onclick="model_switcher()"
-					title="Kattints a többi model megjelenítéséhez!"
-				/>
+				<input type="submit" value="Model" id="submit" onclick="model_switcher()" title="Kattints a többi model megjelenítéséhez!" />
 			</h2>
 
 			<input type="radio" id="model1" name="model" value="1" class="radio" /> Model S
@@ -85,13 +80,7 @@
 
 		<div id="model_other" class="three">
 			<h2>
-				<input
-					type="submit"
-					value="Model"
-					id="submit"
-					onclick="model_switcher()"
-					title="Kattints a többi model megjelenítéséhez!"
-				/>
+				<input type="submit" value="Model" id="submit" onclick="model_switcher()" title="Kattints a többi model megjelenítéséhez!" />
 			</h2>
 
 			<input type="radio" id="model5" name="model" value="5" class="radio" /> Cybertruck
@@ -103,20 +92,22 @@
 			<h2>Kivitel (Model S)</h2>
 
 			<input type="radio" id="models_options1" name="options" value="1" class="radio" />
-			Long Range Plus (80,000 $)
+			Long Range Plus (75,000 $)
 			<input type="radio" id="models_options2" name="options" value="2" class="radio" />
-			Performance (100,000 $)
+			Performance (95,000 $)
+			<input type="radio" id="models_options3" name="options" value="3" class="radio" />
+			Plaid (140,000 $)
 		</div>
 
 		<div id="model3_options" class="four">
 			<h2>Kivitel (Model 3)</h2>
 
 			<input type="radio" id="model3_options1" name="options" value="1" class="radio" />
-			Standard Range Plus (40,000 $)
+			Standard Range Plus (38,000 $)
 			<input type="radio" id="model3_options2" name="options" value="2" class="radio" />
-			Long Range (49,000 $)
+			Long Range (47,000 $)
 			<input type="radio" id="model3_options3" name="options" value="3" class="radio" />
-			Performance (57,000 $)
+			Performance (55,000 $)
 			<u class="text_b">
 				<input type="checkbox" id="model3_options4" name="options2" value="4" class="radio" />
 				Performance Upgrade (0 $) (PU)
@@ -127,18 +118,18 @@
 			<h2>Kivitel (Model X)</h2>
 
 			<input type="radio" id="modelx_options1" name="options" value="1" class="radio" />
-			Long Range Plus (85,000 $)
+			Long Range Plus (80,000 $)
 			<input type="radio" id="modelx_options2" name="options" value="2" class="radio" />
-			Performance (105,000 $)
+			Performance (100,000 $)
 		</div>
 
 		<div id="modely_options" class="four">
 			<h2>Kivitel (Model Y)</h2>
 
 			<input type="radio" id="modely_options1" name="options" value="1" class="radio" />
-			Long Range (53,000 $)
+			Long Range (50,000 $)
 			<input type="radio" id="modely_options2" name="options" value="2" class="radio" />
-			Performance (61,000 $)
+			Performance (60,000 $)
 			<u class="text_b">
 				<input type="checkbox" id="modely_options3" name="options2" value="3" class="radio" />
 				Performance Upgrade (0 $)
@@ -229,9 +220,7 @@
 
 			<input type="radio" id="model3_tires1" name="tires" value="1" class="radio" /> 18" Aero (0 $)
 			<input type="radio" id="model3_tires2" name="tires" value="2" class="radio" /> 19" Sport (1500 $)
-			<u class="text_b">
-				<input type="radio" id="model3_tires3" name="tires" value="3" class="radio" /> 20" Performance (0 $) (PU)
-			</u>
+			<u class="text_b"> <input type="radio" id="model3_tires3" name="tires" value="3" class="radio" /> 20" Performance (0 $) (PU) </u>
 			<u class="text_c">
 				<input type="radio" id="model3_tires4" name="tires2" value="4" class="radio" /> 18" Pirelli Winter (2200 $)
 				<input type="radio" id="model3_tires5" name="tires2" value="5" class="radio" /> 19" Pirelli Winter (3800 $)
@@ -251,9 +240,7 @@
 
 			<input type="radio" id="modely_tires1" name="tires" value="1" class="radio" /> 19" Gemini (0 $)
 			<input type="radio" id="modely_tires2" name="tires" value="2" class="radio" /> 20" Induction (2000 $)
-			<u class="text_b">
-				<input type="radio" id="modely_tires3" name="tires" value="3" class="radio" /> 21" Überturbine (0 $) (PU)
-			</u>
+			<u class="text_b"> <input type="radio" id="modely_tires3" name="tires" value="3" class="radio" /> 21" Überturbine (0 $) (PU) </u>
 			<u class="text_c">
 				<input type="radio" id="modely_tires4" name="tires2" value="4" class="radio" /> 18" Pirelli Winter (2200 $)
 				<input type="radio" id="modely_tires5" name="tires2" value="5" class="radio" /> 19" Pirelli Winter (3800 $)
@@ -268,7 +255,7 @@
 			<input type="radio" id="models_other3" name="other" value="3" class="radio" /> Cream belső (1500 $)
 			<u class="text_b">
 				<input type="radio" id="models_other4" name="other2" value="4" class="radio" /> Autopilot (0 $)
-				<input type="radio" id="models_other5" name="other2" value="5" class="radio" /> FSD (7000 $)
+				<input type="radio" id="models_other5" name="other2" value="5" class="radio" /> FSD (8000 $)
 			</u>
 		</div>
 
@@ -279,7 +266,7 @@
 			<input type="radio" id="model3_other2" name="other" value="2" class="radio" /> Fekete és fehér belső (1000 $)
 			<u class="text_b">
 				<input type="radio" id="model3_other3" name="other2" value="3" class="radio" /> Autopilot (0 $)
-				<input type="radio" id="model3_other4" name="other2" value="4" class="radio" /> FSD (7000 $)
+				<input type="radio" id="model3_other4" name="other2" value="4" class="radio" /> FSD (8000 $)
 			</u>
 		</div>
 
@@ -291,7 +278,7 @@
 			<input type="radio" id="modelx_other3" name="other" value="3" class="radio" /> Cream belső (1500 $)
 			<u class="text_b">
 				<input type="radio" id="modelx_other4" name="other2" value="4" class="radio" /> Autopilot (0 $)
-				<input type="radio" id="modelx_other5" name="other2" value="5" class="radio" /> FSD (7000 $)
+				<input type="radio" id="modelx_other5" name="other2" value="5" class="radio" /> FSD (8000 $)
 			</u>
 			<u class="text_c">
 				<input type="radio" id="modelx_other6" name="other3" value="6" class="radio" /> 5 üléses (0 $)
@@ -307,7 +294,7 @@
 			<input type="radio" id="modely_other2" name="other" value="2" class="radio" /> Fekete és fehér belső (1000 $)
 			<u class="text_b">
 				<input type="radio" id="modely_other3" name="other2" value="3" class="radio" /> Autopilot (0 $)
-				<input type="radio" id="modely_other4" name="other2" value="4" class="radio" /> FSD (7000 $)
+				<input type="radio" id="modely_other4" name="other2" value="4" class="radio" /> FSD (8000 $)
 			</u>
 			<u class="text_c">
 				<input type="radio" id="modely_other5" name="other3" value="3" class="radio" /> 5 üléses (0 $)
@@ -323,7 +310,7 @@
 
 		<footer>
 			<h2>
-				Készítette: <a target="_blank" href="https://www.levminer.com">Levminer</a> - TC 2.2.0 - Forráskód:
+				Készítette: <a target="_blank" href="https://www.levminer.com">Levminer</a> - TC 2.3.0 - Forráskód:
 				<a target="_blank" href="https://github.com/Levminer/tesla-calculator">GitHub</a>
 			</h2>
 		</footer>

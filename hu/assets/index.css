@@ -166,11 +166,13 @@ input:focus::-webkit-input-placeholder {
 	padding: 16px 31px;
 	text-decoration: none;
 	transition: 0.3s;
+	outline: none;
 }
 #button:hover {
 	background: rgb(222, 10, 10);
 	border: 1px solid white;
 	color: white;
+	outline: none;
 }
 
 input#submit {
@@ -179,16 +181,22 @@ input#submit {
 	font-size: 1em;
 	color: white;
 	cursor: pointer;
+	text-decoration: underline;
 }
 
 input#submit:hover {
-	text-decoration: underline;
+	text-decoration: underline dashed;
 }
 
 /* links */
 a:link {
-	text-decoration: none;
+	text-decoration: underline;
 	color: white;
+}
+
+a:hover {
+	color: white;
+	text-decoration: underline dashed;
 }
 
 a:visited {
@@ -248,7 +256,6 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
-
 /* mobile view */
 @media only screen and (max-width: 900px) {
 	footer {

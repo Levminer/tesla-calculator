@@ -12,13 +12,13 @@ let modely_options = () => {
 
 		// options
 		if (modely_options1 == true) {
-			price_number += 53000
+			price_number += my_options_price[0]
 
 			console.log("Options 1 (Model Y): " + price_number)
 		}
 
 		if (modely_options2 == true) {
-			price_number += 61000
+			price_number += my_options_price[1]
 
 			console.log("Options 2 (Model Y): " + price_number)
 		}
@@ -41,31 +41,31 @@ let modely_color = () => {
 
 		// options
 		if (modely_color1 == true) {
-			price_number += 0
+			price_number += m3_my_color_price[0]
 
 			console.log("Color 1 (Model Y): " + price_number)
 		}
 
 		if (modely_color2 == true) {
-			price_number += 1000
+			price_number += m3_my_color_price[1]
 
 			console.log("Color 2 (Model Y): " + price_number)
 		}
 
 		if (modely_color3 == true) {
-			price_number += 1000
+			price_number += m3_my_color_price[2]
 
 			console.log("Color 3 (Model Y): " + price_number)
 		}
 
 		if (modely_color4 == true) {
-			price_number += 1000
+			price_number += m3_my_color_price[3]
 
 			console.log("Color 4 (Model Y): " + price_number)
 		}
 
 		if (modely_color5 == true) {
-			price_number += 2000
+			price_number += m3_my_color_price[4]
 
 			console.log("Color 5 (Model Y): " + price_number)
 		}
@@ -88,31 +88,31 @@ let modely_tires = () => {
 
 		// options
 		if (modely_tires1 == true) {
-			price_number += 0
+			price_number += my_tires_price[0]
 
 			console.log("Tires 1 (Model Y): " + price_number)
 		}
 
 		if (modely_tires2 == true) {
-			price_number += 2000
+			price_number += my_tires_price[1]
 
 			console.log("Tires 2 (Model Y): " + price_number)
 		}
 
 		if (modely_tires3 == true) {
-			price_number += 0
+			price_number += my_tires_price[2]
 
 			console.log("Tires PU (Model Y): " + price_number)
 		}
 
 		if (modely_tires4 == true) {
-			price_number += 2200
+			price_number += my_tires_price[3]
 
 			console.log("Tires2 1 (Model Y): " + price_number)
 		}
 
 		if (modely_tires5 == true) {
-			price_number += 3800
+			price_number += my_tires_price[4]
 
 			console.log("Tires2 2 (Model Y): " + price_number)
 		}
@@ -131,42 +131,42 @@ let modely_other = () => {
 	if ((modely_other1 || modely_other2) && (modely_other3 || modely_other4) && (modely_other5 || modely_other6) == true) {
 		// options
 		if (modely_other1 == true) {
-			price_number += 0
+			price_number += my_other_price[0]
 
 			modely_money()
 			console.log("Other 1 (Model Y): " + price_number)
 		}
 
 		if (modely_other2 == true) {
-			price_number += 1000
+			price_number += my_other_price[1]
 
 			modely_money()
 			console.log("Other 1 (Model Y): " + price_number)
 		}
 
 		if (modely_other3 == true) {
-			price_number += 0
+			price_number += autopilot_price[0]
 
 			modely_money()
 			console.log("Other2 1 (Model Y): " + price_number)
 		}
 
 		if (modely_other4 == true) {
-			price_number += 7000
+			price_number += autopilot_price[1]
 
 			modely_money()
 			console.log("Other2 2 (Model Y): " + price_number)
 		}
 
 		if (modely_other5 == true) {
-			price_number += 0
+			price_number += my_other_price[2]
 
 			modely_money()
 			console.log("Other3 1 (Model Y): " + price_number)
 		}
 
 		if (modely_other6 == true) {
-			price_number += 3000
+			price_number += my_other_price[3]
 
 			modely_money()
 			console.log("Other3 1 (Model Y): " + price_number)
@@ -212,13 +212,9 @@ let modely_money = () => {
 	let month_final_vat = Math.round(calculator2 + 0)
 	let year_final_vat = Math.round(calculator2 / 12)
 
-	document.getElementById(
-		"price"
-	).innerText = `Price: ${price_final}${price_symbol} - Price with VAT: ${price_final_vat}${price_symbol}`
+	document.getElementById("price").innerText = `Price: ${price_final}${price_symbol} - Price with VAT: ${price_final_vat}${price_symbol}`
 
-	document.getElementById(
-		"month"
-	).innerText = `${month_final} months you have to work - ${month_final_vat} months you have to work with vat`
+	document.getElementById("month").innerText = `${month_final} months you have to work - ${month_final_vat} months you have to work with vat`
 
 	document.getElementById("year").innerText = `That's ${year_final} years! - That's ${year_final_vat} years with vat!`
 }

@@ -13,25 +13,25 @@ let model3_options = () => {
 
 		// options
 		if (model3_options1 == true) {
-			price_number += 40000
+			price_number += m3_options_price[0]
 
 			console.log("Options 1 (Model 3): " + price_number)
 		}
 
 		if (model3_options2 == true) {
-			price_number += 49000
+			price_number += m3_options_price[1]
 
 			console.log("Options 2 (Model 3): " + price_number)
 		}
 
 		if (model3_options3 == true) {
-			price_number += 57000
+			price_number += m3_options_price[2]
 
 			console.log("Options 3 (Model 3): " + price_number)
 		}
 
 		if (model3_options4 == true) {
-			price_number += 0
+			price_number += m3_options_price[3]
 
 			console.log("Options PU (Model 3): " + price_number)
 		}
@@ -54,31 +54,31 @@ let model3_color = () => {
 
 		// options
 		if (model3_color1 == true) {
-			price_number += 0
+			price_number += m3_my_color_price[0]
 
 			console.log("Color 1 (Model 3): " + price_number)
 		}
 
 		if (model3_color2 == true) {
-			price_number += 1000
+			price_number += m3_my_color_price[1]
 
 			console.log("Color 2 (Model 3): " + price_number)
 		}
 
 		if (model3_color3 == true) {
-			price_number += 1000
+			price_number += m3_my_color_price[2]
 
 			console.log("Color 3 (Model 3): " + price_number)
 		}
 
 		if (model3_color4 == true) {
-			price_number += 1000
+			price_number += m3_my_color_price[3]
 
 			console.log("Color 4 (Model 3): " + price_number)
 		}
 
 		if (model3_color5 == true) {
-			price_number += 2000
+			price_number += m3_my_color_price[4]
 
 			console.log("Color 5 (Model 3): " + price_number)
 		}
@@ -101,31 +101,31 @@ let model3_tires = () => {
 
 		// options
 		if (model3_tires1 == true) {
-			price_number += 0
+			price_number += m3_tires_price[0]
 
 			console.log("Tires 1 (Model 3): " + price_number)
 		}
 
 		if (model3_tires2 == true) {
-			price_number += 1500
+			price_number += m3_tires_price[1]
 
 			console.log("Tires 2 (Model 3): " + price_number)
 		}
 
 		if (model3_tires3 == true) {
-			price_number += 0
+			price_number += m3_tires_price[2]
 
 			console.log("Tires PU (Model 3): " + price_number)
 		}
 
 		if (model3_tires4 == true) {
-			price_number += 2200
+			price_number += m3_tires_price[3]
 
 			console.log("Tires2 1 (Model 3): " + price_number)
 		}
 
 		if (model3_tires5 == true) {
-			price_number += 3800
+			price_number += m3_tires_price[4]
 
 			console.log("Tires2 2 (Model 3): " + price_number)
 		}
@@ -142,28 +142,28 @@ let model3_other = () => {
 	if ((model3_other1 || model3_other2) && (model3_other3 || model3_other4) == true) {
 		// options
 		if (model3_other1 == true) {
-			price_number += 0
+			price_number += m3_other_price[0]
 
 			model3_money()
 			console.log("Other 1 (Model 3): " + price_number)
 		}
 
 		if (model3_other2 == true) {
-			price_number += 1000
+			price_number += m3_other_price[1]
 
 			model3_money()
 			console.log("Other 1 (Model 3): " + price_number)
 		}
 
 		if (model3_other3 == true) {
-			price_number += 0
+			price_number += autopilot_price[0]
 
 			model3_money()
 			console.log("Other2 1 (Model 3): " + price_number)
 		}
 
 		if (model3_other4 == true) {
-			price_number += 7000
+			price_number += autopilot_price[1]
 
 			model3_money()
 			console.log("Other2 2 (Model 3): " + price_number)
@@ -209,13 +209,9 @@ let model3_money = () => {
 	let month_final_vat = Math.round(calculator2 + 0)
 	let year_final_vat = Math.round(calculator2 / 12)
 
-	document.getElementById(
-		"price"
-	).innerText = `Végösszeg: ${price_final}${price_symbol} - Végösszeg áfával: ${price_final_vat}${price_symbol}`
+	document.getElementById("price").innerText = `Végösszeg: ${price_final}${price_symbol} - Végösszeg áfával: ${price_final_vat}${price_symbol}`
 
-	document.getElementById(
-		"month"
-	).innerText = `${month_final} Hónapot kell dolgoznod - ${month_final_vat} Hónapot kell dolgoznod áfával`
+	document.getElementById("month").innerText = `${month_final} Hónapot kell dolgoznod - ${month_final_vat} Hónapot kell dolgoznod áfával`
 
 	document.getElementById("year").innerText = `Ami ${year_final} év kb! - Ami ${year_final_vat} év kb áfával!`
 }
