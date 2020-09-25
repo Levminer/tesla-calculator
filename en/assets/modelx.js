@@ -11,13 +11,13 @@ let modelx_options = () => {
 
 		// options
 		if (modelx_options1 == true) {
-			price_number += 85000
+			price_number += mx_options_price[0]
 
 			console.log("Options 1 (Model X): " + price_number)
 		}
 
 		if (modelx_options2 == true) {
-			price_number += 105000
+			price_number += mx_options_price[1]
 
 			console.log("Options 2 (Model X): " + price_number)
 		}
@@ -40,32 +40,31 @@ let modelx_color = () => {
 
 		// options
 		if (modelx_color1 == true) {
-			price_number += 0
+			price_number += ms_mx_color_price[0]
 
 			console.log("Color 1 (Model X): " + price_number)
 		}
 
 		if (modelx_color2 == true) {
-			price_number += 1500
+			price_number += ms_mx_color_price[1]
 
 			console.log("Color 2 (Model X): " + price_number)
 		}
 
 		if (modelx_color3 == true) {
-			price_number += 1500
+			price_number += ms_mx_color_price[2]
 
 			console.log("Color 3 (Model X): " + price_number)
 		}
 
 		if (modelx_color4 == true) {
-			price_number += 1500
+			price_number += ms_mx_color_price[3]
 
 			console.log("Color 4 (Model X): " + price_number)
 		}
 
 		if (modelx_color5 == true) {
-			price_number += 2500
-
+			price_number += ms_mx_color_price[4]
 			console.log("Color 5 (Model X): " + price_number)
 		}
 	}
@@ -85,19 +84,19 @@ let modelx_tires = () => {
 
 		// options
 		if (modelx_tires1 == true) {
-			price_number += 0
+			price_number += mx_other_price[0]
 
 			console.log("Tires 1 (Model X): " + price_number)
 		}
 
 		if (modelx_tires2 == true) {
-			price_number += 2000
+			price_number += mx_other_price[1]
 
 			console.log("Tires 2 (Model X): " + price_number)
 		}
 
 		if (modelx_tires3 == true) {
-			price_number += 5500
+			price_number += mx_other_price[2]
 
 			console.log("Tires 3 (Model X): " + price_number)
 		}
@@ -122,56 +121,56 @@ let modelx_other = () => {
 	) {
 		// options
 		if (modelx_other1 == true) {
-			price_number += 0
+			price_number += mx_other_price[0]
 
 			modelx_money()
 			console.log("Other 1 (Model X): " + price_number)
 		}
 
 		if (modelx_other2 == true) {
-			price_number += 1500
+			price_number += mx_other_price[1]
 
 			modelx_money()
 			console.log("Other 2 (Model X): " + price_number)
 		}
 
 		if (modelx_other3 == true) {
-			price_number += 1500
+			price_number += mx_other_price[2]
 
 			modelx_money()
 			console.log("Other 3 (Model X): " + price_number)
 		}
 
 		if (modelx_other4 == true) {
-			price_number += 0
+			price_number += autopilot_price[0]
 
 			modelx_money()
 			console.log("Other2 1 (Model X): " + price_number)
 		}
 
 		if (modelx_other5 == true) {
-			price_number += 7000
+			price_number += autopilot_price[1]
 
 			modelx_money()
 			console.log("Other2 2 (Model X): " + price_number)
 		}
 
 		if (modelx_other6 == true) {
-			price_number += 0
+			price_number += mx_other_price[3]
 
 			modelx_money()
 			console.log("Other3 1 (Model X): " + price_number)
 		}
 
 		if (modelx_other7 == true) {
-			price_number += 6500
+			price_number += mx_other_price[4]
 
 			modelx_money()
 			console.log("Other3 2 (Model X): " + price_number)
 		}
 
 		if (modelx_other8 == true) {
-			price_number += 3500
+			price_number += mx_other_price[5]
 
 			modelx_money()
 			console.log("Other3 3 (Model X): " + price_number)
@@ -217,13 +216,9 @@ let modelx_money = () => {
 	let month_final_vat = Math.round(calculator2 + 0)
 	let year_final_vat = Math.round(calculator2 / 12)
 
-	document.getElementById(
-		"price"
-	).innerText = `Price: ${price_final}${price_symbol} - Price with VAT: ${price_final_vat}${price_symbol}`
+	document.getElementById("price").innerText = `Price: ${price_final}${price_symbol} - Price with VAT: ${price_final_vat}${price_symbol}`
 
-	document.getElementById(
-		"month"
-	).innerText = `${month_final} months you have to work - ${month_final_vat} months you have to work with vat`
+	document.getElementById("month").innerText = `${month_final} months you have to work - ${month_final_vat} months you have to work with vat`
 
 	document.getElementById("year").innerText = `That's ${year_final} years! - That's ${year_final_vat} years with vat!`
 }

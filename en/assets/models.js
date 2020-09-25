@@ -2,8 +2,9 @@
 let models_options = () => {
 	let models_options1 = document.getElementById("models_options1").checked
 	let models_options2 = document.getElementById("models_options2").checked
+	let models_options3 = document.getElementById("models_options3").checked
 
-	if (models_options1 || models_options2 == true) {
+	if (models_options1 || models_options2 || models_options3 == true) {
 		// next
 		counter_number = 2
 		let models_color = document.getElementById("models_color")
@@ -11,15 +12,20 @@ let models_options = () => {
 
 		// options
 		if (models_options1 == true) {
-			price_number += 80000
+			price_number += ms_options_price[0]
 
 			console.log("Options 1 (Model S): " + price_number)
 		}
 
 		if (models_options2 == true) {
-			price_number += 100000
+			price_number += ms_options_price[1]
 
 			console.log("Options 2 (Model S): " + price_number)
+		}
+		if (models_options3 == true) {
+			price_number += ms_options_price[2]
+
+			console.log("Options 3 (Model S): " + price_number)
 		}
 	}
 }
@@ -40,31 +46,31 @@ let models_color = () => {
 
 		// options
 		if (models_color1 == true) {
-			price_number += 0
+			price_number += ms_mx_color_price[0]
 
 			console.log("Color 1 (Model S): " + price_number)
 		}
 
 		if (models_color2 == true) {
-			price_number += 1500
+			price_number += ms_mx_color_price[1]
 
 			console.log("Color 2 (Model S): " + price_number)
 		}
 
 		if (models_color3 == true) {
-			price_number += 1500
+			price_number += ms_mx_color_price[2]
 
 			console.log("Color 3 (Model S): " + price_number)
 		}
 
 		if (models_color4 == true) {
-			price_number += 1500
+			price_number += ms_mx_color_price[3]
 
 			console.log("Color 4 (Model S): " + price_number)
 		}
 
 		if (models_color5 == true) {
-			price_number += 2500
+			price_number += ms_mx_color_price[4]
 
 			console.log("Color 5 (Model S): " + price_number)
 		}
@@ -85,19 +91,19 @@ let models_tires = () => {
 
 		// options
 		if (models_tires1 == true) {
-			price_number += 0
+			price_number += ms_tires_price[0]
 
 			console.log("Tires 1 (Model S): " + price_number)
 		}
 
 		if (models_tires2 == true) {
-			price_number += 1500
+			price_number += ms_tires_price[1]
 
 			console.log("Tires 2 (Model S): " + price_number)
 		}
 
 		if (models_tires3 == true) {
-			price_number += 4500
+			price_number += ms_tires_price[2]
 
 			console.log("Tires 3 (Model S): " + price_number)
 		}
@@ -115,35 +121,35 @@ let models_other = () => {
 	if ((models_other1 || models_other2 || models_other3) && (models_other4 || models_other5) == true) {
 		// options
 		if (models_other1 == true) {
-			price_number += 0
+			price_number += ms_other_price[0]
 
 			models_money()
 			console.log("Other 1 (Model S): " + price_number)
 		}
 
 		if (models_other2 == true) {
-			price_number += 1500
+			price_number += ms_other_price[1]
 
 			models_money()
 			console.log("Other 2 (Model S): " + price_number)
 		}
 
 		if (models_other3 == true) {
-			price_number += 1500
+			price_number += ms_other_price[2]
 
 			models_money()
 			console.log("Other 3 (Model S): " + price_number)
 		}
 
-		if (model3_other4 == true) {
-			price_number += 0
+		if (models_other4 == true) {
+			price_number += autopilot_price[0]
 
 			models_money()
 			console.log("Other2 1 (Model S): " + price_number)
 		}
 
-		if (model3_other5 == true) {
-			price_number += 7000
+		if (models_other5 == true) {
+			price_number += autopilot_price[1]
 
 			models_money()
 			console.log("Other2 2 (Model S): " + price_number)
@@ -189,13 +195,9 @@ let models_money = () => {
 	let month_final_vat = Math.round(calculator2 + 0)
 	let year_final_vat = Math.round(calculator2 / 12)
 
-	document.getElementById(
-		"price"
-	).innerText = `Price: ${price_final}${price_symbol} - Price with VAT: ${price_final_vat}${price_symbol}`
+	document.getElementById("price").innerText = `Price: ${price_final}${price_symbol} - Price with VAT: ${price_final_vat}${price_symbol}`
 
-	document.getElementById(
-		"month"
-	).innerText = `${month_final} months you have to work - ${month_final_vat} months you have to work with vat`
+	document.getElementById("month").innerText = `${month_final} months you have to work - ${month_final_vat} months you have to work with vat`
 
 	document.getElementById("year").innerText = `That's ${year_final} years! - That's ${year_final_vat} years with vat!`
 }

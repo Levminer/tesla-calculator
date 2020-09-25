@@ -7,21 +7,21 @@ let cybertruck_options = () => {
 	if (cybertruck_options1 || cybertruck_options2 || cybertruck_options3 == true) {
 		// options
 		if (cybertruck_options1 == true) {
-			price_number += 40000
+			price_number += c_options_price[0]
 
 			console.log("Options 1 (Cybertruck): " + price_number)
 			model_other_money()
 		}
 
 		if (cybertruck_options2 == true) {
-			price_number += 50000
+			price_number += c_options_price[1]
 
 			console.log("Options 2 (Cybertruck): " + price_number)
 			model_other_money()
 		}
 
 		if (cybertruck_options3 == true) {
-			price_number += 70000
+			price_number += c_options_price[2]
 
 			console.log("Options 3 (Cybertruck): " + price_number)
 			model_other_money()
@@ -38,21 +38,21 @@ let semi_options = () => {
 	if (semi_options1 || semi_options2 || semi_options3 == true) {
 		// options
 		if (semi_options1 == true) {
-			price_number += 150000
+			price_number += s_options_price[0]
 
 			console.log("Options 1 (Semi): " + price_number)
 			model_other_money()
 		}
 
 		if (semi_options2 == true) {
-			price_number += 180000
+			price_number += s_options_price[1]
 
 			console.log("Options 2 (Semi): " + price_number)
 			model_other_money()
 		}
 
 		if (semi_options3 == true) {
-			price_number += 200000
+			price_number += s_options_price[1]
 
 			console.log("Options 3 (Semi): " + price_number)
 			model_other_money()
@@ -68,14 +68,14 @@ let roadster_options = () => {
 	if (roadster_options1 || roadster_options2 == true) {
 		// options
 		if (roadster_options1 == true) {
-			price_number += 200000
+			price_number += r_options_price[0]
 
 			console.log("Options 1 (Roadster): " + price_number)
 			model_other_money()
 		}
 
 		if (roadster_options2 == true) {
-			price_number += 250000
+			price_number += r_options_price[1]
 
 			console.log("Options 2 (Roadster): " + price_number)
 			model_other_money()
@@ -121,13 +121,9 @@ let model_other_money = () => {
 	let month_final_vat = Math.round(calculator2 + 0)
 	let year_final_vat = Math.round(calculator2 / 12)
 
-	document.getElementById(
-		"price"
-	).innerText = `Price: ${price_final}${price_symbol} - Price with VAT: ${price_final_vat}${price_symbol}`
+	document.getElementById("price").innerText = `Price: ${price_final}${price_symbol} - Price with VAT: ${price_final_vat}${price_symbol}`
 
-	document.getElementById(
-		"month"
-	).innerText = `${month_final} months you have to work - ${month_final_vat} months you have to work with vat`
+	document.getElementById("month").innerText = `${month_final} months you have to work - ${month_final_vat} months you have to work with vat`
 
 	document.getElementById("year").innerText = `That's ${year_final} years! - That's ${year_final_vat} years with vat!`
 }
