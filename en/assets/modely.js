@@ -4,7 +4,7 @@ let modely_options = () => {
 	let modely_options2 = document.getElementById("modely_options2").checked
 	let modely_options3 = document.getElementById("modely_options3").checked
 
-	if (modely_options1 || modely_options2 || modely_options3 == true) {
+	if (modely_options1 || modely_options2 == true) {
 		// next
 		counter_number = 2
 		let modely_color = document.getElementById("modely_color")
@@ -21,6 +21,12 @@ let modely_options = () => {
 			price_number += my_options_price[1]
 
 			console.log("Options 2 (Model Y): " + price_number)
+		}
+
+		if (modely_options3 == true) {
+			price_number += my_options_price[2]
+
+			console.log("Options 3 (Model Y): " + price_number)
 		}
 	}
 }
