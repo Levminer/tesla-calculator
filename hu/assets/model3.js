@@ -3,7 +3,6 @@ let model3_options = () => {
 	let model3_options1 = document.getElementById("model3_options1").checked
 	let model3_options2 = document.getElementById("model3_options2").checked
 	let model3_options3 = document.getElementById("model3_options3").checked
-	let model3_options4 = document.getElementById("model3_options4").checked
 
 	if (model3_options1 || model3_options2 || model3_options3 == true) {
 		// next
@@ -28,12 +27,6 @@ let model3_options = () => {
 			price_number += m3_options_price[2]
 
 			console.log("Options 3 (Model 3): " + price_number)
-		}
-
-		if (model3_options4 == true) {
-			price_number += m3_options_price[3]
-
-			console.log("Options PU (Model 3): " + price_number)
 		}
 	}
 }
