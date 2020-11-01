@@ -307,3 +307,13 @@ input::-webkit-inner-spin-button {
 		white-space: nowrap;
 	}
 }
+
+input:focus::placeholder {
+	transition: 0.2s ease-in;
+	color: transparent;
+}
+
+input:hover::placeholder {
+	transition: 0.2s ease-in;
+	color: transparent;
+}
