@@ -1,0 +1,30 @@
+.center {
+	top: 0.5rem;
+	height: 50rem;
+	width: 80rem;
+}
+
+div {
+	margin-bottom: 1rem;
+}
+
+#models_0 {
+	display: none;
+}
+
+#models_1 {
+	display: none;
+}
+
+.model_switcher {
+	background: none;
+	border: none;
+	font-size: 1em;
+	color: white;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.model_switcher:hover {
+	text-decoration: underline dashed;
+}
